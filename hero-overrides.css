@@ -1,0 +1,237 @@
+/* Hero slide design refinements requested 2026-09-20 */
+
+.hero-banner .hero-slide-license,
+.hero-banner .hero-slide-clean {
+  display: block !important;
+  position: relative !important;
+  min-height: 508px !important;
+  padding: 56px 72px 58px !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 88% 15%, rgba(54, 105, 210, .16), transparent 27%),
+    linear-gradient(145deg, #071d49 0%, #08265f 58%, #0a347f 100%) !important;
+}
+
+.hero-banner .hero-slide-license::before,
+.hero-banner .hero-slide-clean::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 360px;
+  height: 360px;
+  right: -126px;
+  bottom: -175px;
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 52px rgba(76, 130, 230, .055),
+    0 0 0 104px rgba(76, 130, 230, .035);
+}
+
+.hero-banner .hero-slide-license::after,
+.hero-banner .hero-slide-clean::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 280px;
+  height: 280px;
+  right: 80px;
+  top: -160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(66, 129, 255, .15), transparent 66%);
+}
+
+.hero-banner .hero-slide-license .hero-copy-special,
+.hero-banner .hero-slide-clean .hero-copy-special {
+  position: relative !important;
+  z-index: 3 !important;
+  max-width: 690px !important;
+  min-height: 390px !important;
+  padding-top: 0 !important;
+}
+
+.hero-banner .hero-slide-license .eyebrow,
+.hero-banner .hero-slide-clean .eyebrow {
+  margin-bottom: 0 !important;
+  color: #8ab7ff !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  letter-spacing: .16em !important;
+}
+
+/* Convert the old large right illustration into a small premium icon tile */
+.hero-banner .hero-slide-license .hero-feature-visual,
+.hero-banner .hero-slide-clean .hero-feature-visual {
+  position: absolute !important;
+  z-index: 4 !important;
+  left: 72px !important;
+  top: 104px !important;
+  width: 78px !important;
+  height: 78px !important;
+  min-height: 0 !important;
+  pointer-events: none !important;
+}
+
+.hero-banner .hero-slide-license .feature-orbit,
+.hero-banner .hero-slide-clean .feature-orbit,
+.hero-banner .hero-slide-license .feature-floating,
+.hero-banner .hero-slide-clean .feature-floating,
+.hero-banner .hero-slide-license .feature-caption,
+.hero-banner .hero-slide-clean .feature-caption {
+  display: none !important;
+}
+
+.hero-banner .hero-slide-license .feature-icon-card,
+.hero-banner .hero-slide-clean .feature-icon-card {
+  position: static !important;
+  width: 78px !important;
+  height: 78px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 22px !important;
+  color: #ffffff !important;
+  background: rgba(255,255,255,.11) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.08), 0 16px 34px rgba(0,0,0,.14) !important;
+  backdrop-filter: blur(10px) !important;
+  transform: none !important;
+}
+
+.hero-banner .hero-slide-license .feature-icon-card svg,
+.hero-banner .hero-slide-clean .feature-icon-card svg {
+  width: 42px !important;
+  height: 42px !important;
+}
+
+.hero-banner .hero-slide-license .hero-copy-special h1,
+.hero-banner .hero-slide-clean .hero-copy-special h1 {
+  margin: 118px 0 0 !important;
+  max-width: 650px !important;
+  font-size: clamp(48px, 4.2vw, 66px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.055em !important;
+  color: #ffffff !important;
+}
+
+.hero-banner .hero-slide-license .hero-special-desc,
+.hero-banner .hero-slide-clean .hero-special-desc {
+  max-width: 650px !important;
+  margin: 27px 0 0 !important;
+  color: rgba(255,255,255,.69) !important;
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+}
+
+/* Rounded white pills like the existing '프로그램 보기' button */
+.hero-banner .hero-slide-license .hero-special-points,
+.hero-banner .hero-slide-clean .hero-special-points {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 11px !important;
+  margin-top: 31px !important;
+}
+
+.hero-banner .hero-slide-license .hero-special-points span,
+.hero-banner .hero-slide-clean .hero-special-points span {
+  min-height: 46px !important;
+  padding: 10px 19px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(255,255,255,.92) !important;
+  border-radius: 999px !important;
+  color: #0b45c8 !important;
+  background: #ffffff !important;
+  box-shadow: 0 12px 26px rgba(0, 10, 40, .18) !important;
+  font-size: 14px !important;
+  font-weight: 850 !important;
+  letter-spacing: -.015em !important;
+  backdrop-filter: none !important;
+}
+
+.hero-banner .hero-slide-license .hero-special-points span {
+  color: #9a5a00 !important;
+}
+
+.hero-banner .hero-slide-clean .hero-special-points span {
+  color: #087a5b !important;
+}
+
+/* Keep navigation large and clearly visible */
+.hero-banner .hero-slider-controls {
+  right: 25px !important;
+  bottom: 22px !important;
+  min-width: 190px !important;
+  height: 54px !important;
+  padding: 7px 10px !important;
+  gap: 7px !important;
+  justify-content: center !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  background: rgba(3, 18, 48, .88) !important;
+  box-shadow: 0 16px 34px rgba(0,0,0,.23) !important;
+}
+
+.hero-banner .hero-slider-controls button {
+  width: 37px !important;
+  height: 37px !important;
+}
+
+.hero-banner .hero-slider-count {
+  min-width: 58px !important;
+  font-size: 14px !important;
+}
+
+@media (max-width: 760px) {
+  .hero-banner .hero-slide-license,
+  .hero-banner .hero-slide-clean {
+    min-height: 650px !important;
+    padding: 34px 28px 78px !important;
+  }
+
+  .hero-banner .hero-slide-license .hero-feature-visual,
+  .hero-banner .hero-slide-clean .hero-feature-visual {
+    left: 28px !important;
+    top: 84px !important;
+    width: 66px !important;
+    height: 66px !important;
+  }
+
+  .hero-banner .hero-slide-license .feature-icon-card,
+  .hero-banner .hero-slide-clean .feature-icon-card {
+    width: 66px !important;
+    height: 66px !important;
+    border-radius: 19px !important;
+  }
+
+  .hero-banner .hero-slide-license .feature-icon-card svg,
+  .hero-banner .hero-slide-clean .feature-icon-card svg {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .hero-banner .hero-slide-license .hero-copy-special h1,
+  .hero-banner .hero-slide-clean .hero-copy-special h1 {
+    margin-top: 100px !important;
+    font-size: clamp(43px, 12vw, 58px) !important;
+  }
+
+  .hero-banner .hero-slide-license .hero-special-desc,
+  .hero-banner .hero-slide-clean .hero-special-desc {
+    font-size: 16px !important;
+  }
+
+  .hero-banner .hero-slide-license .hero-special-points span,
+  .hero-banner .hero-slide-clean .hero-special-points span {
+    min-height: 40px !important;
+    padding: 8px 13px !important;
+    font-size: 12px !important;
+  }
+
+  .hero-banner .hero-slider-controls {
+    right: 14px !important;
+    bottom: 14px !important;
+    min-width: 164px !important;
+    height: 48px !important;
+  }
+}
