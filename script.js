@@ -34,30 +34,40 @@ const headerInner = document.querySelector('.header-inner');
 
 if (headerInner) {
   const languages = [
-    ['ko', '🇰🇷', '한국어'],
-    ['en', '🇺🇸', 'English'],
-    ['ja', '🇯🇵', '日本語'],
-    ['zh-CN', '🇨🇳', '简体中文'],
-    ['zh-TW', '🇹🇼', '繁體中文'],
-    ['de', '🇩🇪', 'Deutsch'],
-    ['fr', '🇫🇷', 'français'],
-    ['it', '🇮🇹', 'italiano'],
-    ['es', '🇪🇸', 'español'],
-    ['pt', '🇧🇷', 'Português'],
-    ['nl', '🇳🇱', 'Nederlands'],
-    ['pl', '🇵🇱', 'polski'],
-    ['ru', '🇷🇺', 'Русский'],
-    ['vi', '🇻🇳', 'Tiếng Việt'],
-    ['id', '🇮🇩', 'Bahasa Indonesia'],
-    ['tr', '🇹🇷', 'Türkçe'],
-    ['th', '🇹🇭', 'ไทย'],
+    ['en', 'us', 'English'],
+    ['ja', 'jp', '日本語'],
+    ['zh-CN', 'cn', '简体中文'],
+    ['zh-TW', 'tw', '繁體中文'],
+    ['de', 'de', 'Deutsch'],
+    ['fr', 'fr', 'français'],
+    ['it', 'it', 'italiano'],
+    ['es', 'es', 'español'],
+    ['pt', 'br', 'Português'],
+    ['nl', 'nl', 'Nederlands'],
+    ['pl', 'pl', 'polski'],
+    ['ru', 'ru', 'Русский'],
+    ['vi', 'vn', 'Tiếng Việt'],
+    ['id', 'id', 'Bahasa Indonesia'],
+    ['tr', 'tr', 'Türkçe'],
+    ['th', 'th', 'ไทย'],
   ];
+
+  const flagImg = (countryCode, alt = '') => `
+    <img
+      class="language-flag"
+      src="https://flagcdn.com/w40/${countryCode}.png"
+      srcset="https://flagcdn.com/w80/${countryCode}.png 2x"
+      width="22"
+      alt="${alt}"
+      loading="lazy"
+    />
+  `;
 
   const languageSwitcher = document.createElement('div');
   languageSwitcher.className = 'language-switcher';
   languageSwitcher.innerHTML = `
     <button class="language-button" type="button" aria-expanded="false" aria-haspopup="true" aria-label="언어 선택">
-      <span class="language-current-flag" aria-hidden="true">🇰🇷</span>
+      ${flagImg('kr', '대한민국')}
       <span class="language-caret" aria-hidden="true">▾</span>
     </button>
     <div class="language-menu" role="menu" aria-label="언어 선택 메뉴" hidden></div>
@@ -66,18 +76,17 @@ if (headerInner) {
   const languageMenu = languageSwitcher.querySelector('.language-menu');
   const languageButton = languageSwitcher.querySelector('.language-button');
 
-  languages.forEach(([code, flag, label]) => {
+  languages.forEach(([code, countryCode, label]) => {
     const option = document.createElement('button');
     option.type = 'button';
     option.className = 'language-option';
     option.setAttribute('role', 'menuitem');
-    option.innerHTML = `<span class="language-flag" aria-hidden="true">${flag}</span><span>${label}</span>`;
+    option.setAttribute('lang', code);
+    option.innerHTML = `${flagImg(countryCode, '')}<span>${label}</span>`;
 
     option.addEventListener('click', () => {
       languageMenu.hidden = true;
       languageButton.setAttribute('aria-expanded', 'false');
-
-      if (code === 'ko') return;
 
       const translateUrl = `https://translate.google.com/translate?sl=ko&tl=${encodeURIComponent(code)}&u=${encodeURIComponent(window.location.href)}`;
       window.open(translateUrl, '_blank', 'noopener,noreferrer');
@@ -125,7 +134,7 @@ if (headerInner) {
       align-items: center;
       justify-content: center;
       gap: 6px;
-      padding: 0 9px;
+      padding: 0 8px;
       border: 1px solid #e1e5ea;
       border-radius: 9px;
       background: #fff;
@@ -141,11 +150,14 @@ if (headerInner) {
       border-color: #d0d5dd;
     }
 
-    .language-current-flag,
     .language-flag {
-      font-size: 18px;
-      line-height: 1;
-      flex: 0 0 auto;
+      width: 22px;
+      height: 15px;
+      display: block;
+      flex: 0 0 22px;
+      object-fit: cover;
+      border-radius: 1px;
+      box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.06);
     }
 
     .language-caret {
