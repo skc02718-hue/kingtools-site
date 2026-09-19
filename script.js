@@ -114,54 +114,58 @@ if (headerInner) {
     .language-switcher {
       position: relative;
       flex: 0 0 auto;
-      margin-left: 8px;
+      margin-left: -28px;
       z-index: 1000;
     }
 
     .language-button {
-      min-width: 48px;
-      height: 38px;
+      width: 52px;
+      height: 40px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 7px;
-      padding: 0 10px;
-      border: 1px solid #dfe3e8;
-      border-radius: 10px;
+      gap: 6px;
+      padding: 0 9px;
+      border: 1px solid #e1e5ea;
+      border-radius: 9px;
       background: #fff;
-      color: #2b3137;
+      color: #344054;
+      box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
       cursor: pointer;
       font: inherit;
     }
 
-    .language-button:hover {
+    .language-button:hover,
+    .language-button:focus-visible {
       background: #f8fafc;
+      border-color: #d0d5dd;
     }
 
     .language-current-flag,
     .language-flag {
       font-size: 18px;
       line-height: 1;
+      flex: 0 0 auto;
     }
 
     .language-caret {
-      font-size: 12px;
+      font-size: 11px;
       color: #667085;
       transform: translateY(-1px);
     }
 
     .language-menu {
       position: absolute;
-      top: calc(100% + 7px);
+      top: calc(100% + 6px);
       right: 0;
-      width: 188px;
-      max-height: 510px;
+      width: 186px;
+      max-height: 525px;
       overflow-y: auto;
-      padding: 8px 0;
+      padding: 7px 0;
       border: 1px solid #dfe3e8;
-      border-radius: 8px;
+      border-radius: 7px;
       background: #fff;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
     }
 
     .language-menu[hidden] {
@@ -170,19 +174,20 @@ if (headerInner) {
 
     .language-option {
       width: 100%;
-      min-height: 32px;
+      height: 32px;
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 6px 15px;
+      padding: 0 14px;
       border: 0;
       background: transparent;
-      color: #1f2937;
+      color: #263044;
       text-align: left;
       white-space: nowrap;
       cursor: pointer;
       font: inherit;
       font-size: 14px;
+      font-weight: 400;
     }
 
     .language-option:hover,
@@ -193,13 +198,24 @@ if (headerInner) {
 
     @media (max-width: 1180px) {
       .language-switcher {
-        margin-left: auto;
-        margin-right: 8px;
+        margin-left: -28px;
+        margin-right: 0;
       }
 
       .language-menu {
         right: 0;
-        max-height: min(510px, calc(100vh - 90px));
+        max-height: min(525px, calc(100vh - 90px));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .language-button {
+        width: 48px;
+        height: 40px;
+      }
+
+      .language-menu {
+        width: 184px;
       }
     }
   `;
