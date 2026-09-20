@@ -136,6 +136,19 @@ if (headerInner && !headerInner.querySelector('.language-switcher')) {
    디자인 = styles.css
    움직임 = 여기 script.js
    ========================================================= */
+
+/* assets 폴더를 없애도 슬라이드 디자인이 그대로 보이도록
+   이미지가 들어 있던 최종 커밋 주소를 사용합니다. */
+const heroSlideImageUrls = [
+  'https://raw.githubusercontent.com/skc02718-hue/kingtools-site/faeb76bc56e0e646aeaae88f19586cbefdd578b6/assets/hero-slide-1.jpg',
+  'https://raw.githubusercontent.com/skc02718-hue/kingtools-site/faeb76bc56e0e646aeaae88f19586cbefdd578b6/assets/hero-slide-2.jpg',
+  'https://raw.githubusercontent.com/skc02718-hue/kingtools-site/faeb76bc56e0e646aeaae88f19586cbefdd578b6/assets/hero-slide-3.jpg'
+];
+
+document.querySelectorAll('.hero-slide-image').forEach((image, index) => {
+  if (heroSlideImageUrls[index]) image.src = heroSlideImageUrls[index];
+});
+
 const track = document.querySelector('.hero-slider-track');
 const viewport = document.querySelector('.hero-slider-viewport');
 const prevButton = document.querySelector('.hero-slider-prev');
