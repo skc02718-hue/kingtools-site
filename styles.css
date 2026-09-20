@@ -251,7 +251,9 @@ svg { display: block; }
 .program-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
 .program-card { min-height:380px; padding:30px; display:flex; flex-direction:column; border:1px solid var(--line); border-radius:var(--radius-lg); background:#fff; transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease; scroll-margin-top:112px; }
 .program-card:hover { transform:translateY(-5px); border-color:#d0d5dd; box-shadow:var(--shadow); }
-.program-card.featured { color:#fff; border-color:transparent; background:linear-gradient(150deg,#155eef,#0d45c8); }
+
+/* 킹캡처 카드 - 다른 프로그램 카드와 같은 흰색 형식 */
+.program-card.featured { color:var(--ink); border-color:var(--line); background:#fff; }
 .program-top { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; }
 .product-icon { width:58px; height:58px; display:grid; place-items:center; border-radius:18px; }
 .product-icon svg { width:30px; height:30px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
@@ -263,18 +265,18 @@ svg { display: block; }
 .icon-rose { color:#e11d48; background:#ffe7ed; }
 .icon-indigo { color:#4f46e5; background:#eef2ff; }
 .icon-red { color:#dc2626; background:#feecec; }
-.featured .product-icon { color:#fff; background:rgba(255,255,255,.16); }
+.featured .product-icon { color:#155eef; background:#edf4ff; }
 .product-number { color:#cbd5e1; font-size:13px; font-weight:800; letter-spacing:.08em; }
-.featured .product-number { color:rgba(255,255,255,.55); }
+.featured .product-number { color:#cbd5e1; }
 .card-label { margin-top:38px; color:var(--blue); font-size:11px; font-weight:900; letter-spacing:.12em; }
-.featured .card-label { color:#bfdbfe; }
+.featured .card-label { color:var(--blue); }
 .program-card h3 { margin:8px 0 0; font-size:30px; line-height:1.2; letter-spacing:-.02em; }
 .program-card > p { margin:16px 0 0; font-size:17px; font-weight:700; }
 .program-card > small { margin-top:6px; color:var(--muted); font-size:13px; }
-.featured > small { color:rgba(255,255,255,.68); }
+.featured > small { color:var(--muted); }
 .program-bottom { margin-top:auto; padding-top:28px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
 .os-pill { padding:5px 9px; border-radius:7px; color:#475467; background:#f2f4f7; font-size:11px; font-weight:800; }
-.featured .os-pill { color:#fff; background:rgba(255,255,255,.15); }
+.featured .os-pill { color:#475467; background:#f2f4f7; }
 .program-bottom a { font-size:14px; font-weight:800; }
 .program-bottom i { margin-left:5px; font-style:normal; }
 .wide-card { grid-column:span 2; min-height:330px; background:linear-gradient(135deg,#fff 55%,#eef2ff); }
