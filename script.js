@@ -1,3 +1,13 @@
+/* =========================================================
+   KINGTOOLS script.js
+   기능 동작만 이 파일에서 수정합니다.
+   디자인은 styles.css / 문구와 구조는 index.html에서 수정합니다.
+   ========================================================= */
+
+/* =========================================================
+   01. 모바일 메뉴
+   햄버거 메뉴 열기 / 닫기 / ESC / 화면 크기 변경 처리
+   ========================================================= */
 const menuButton = document.querySelector('.menu-button');
 const navigation = document.querySelector('.primary-nav');
 
@@ -31,7 +41,10 @@ if (menuButton && navigation) {
   });
 }
 
-// Language selector: 기능만 JavaScript에서 처리합니다.
+/* =========================================================
+   02. 언어 선택
+   오른쪽 국기 버튼 / 언어 목록 / Google 번역 링크
+   ========================================================= */
 const headerInner = document.querySelector('.header-inner');
 
 if (headerInner && !headerInner.querySelector('.language-switcher')) {
@@ -44,6 +57,7 @@ if (headerInner && !headerInner.querySelector('.language-switcher')) {
     ['th', 'th', 'ไทย']
   ];
 
+  /* 각 나라 국기 SVG */
   const flagSvg = (countryCode) => {
     const flags = {
       kr: '<rect width="30" height="20" fill="#fff"/><path d="M15 5.6a4.4 4.4 0 0 1 0 8.8 2.2 2.2 0 0 0 0-4.4 2.2 2.2 0 0 1 0-4.4Z" fill="#c60c30"/><path d="M15 14.4a4.4 4.4 0 0 1 0-8.8 2.2 2.2 0 0 0 0 4.4 2.2 2.2 0 0 1 0 4.4Z" fill="#003478"/><g fill="#111"><rect x="4" y="4" width="5" height="1" transform="rotate(-34 4 4)"/><rect x="4.7" y="5.4" width="5" height="1" transform="rotate(-34 4.7 5.4)"/><rect x="21" y="14.5" width="5" height="1" transform="rotate(-34 21 14.5)"/><rect x="20.3" y="13.1" width="5" height="1" transform="rotate(-34 20.3 13.1)"/><rect x="21" y="4" width="5" height="1" transform="rotate(34 21 4)"/><rect x="20.3" y="5.4" width="5" height="1" transform="rotate(34 20.3 5.4)"/><rect x="4" y="14.5" width="5" height="1" transform="rotate(34 4 14.5)"/><rect x="4.7" y="13.1" width="5" height="1" transform="rotate(34 4.7 13.1)"/></g>',
@@ -67,6 +81,7 @@ if (headerInner && !headerInner.querySelector('.language-switcher')) {
     return `<svg class="language-flag" viewBox="0 0 30 20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">${flags[countryCode] || ''}</svg>`;
   };
 
+  /* 언어 선택 버튼 만들기 */
   const languageSwitcher = document.createElement('div');
   languageSwitcher.className = 'language-switcher';
   languageSwitcher.innerHTML = `
@@ -78,6 +93,7 @@ if (headerInner && !headerInner.querySelector('.language-switcher')) {
   const languageMenu = languageSwitcher.querySelector('.language-menu');
   const languageButton = languageSwitcher.querySelector('.language-button');
 
+  /* 언어 목록 만들기 */
   languages.forEach(([code, countryCode, label]) => {
     const option = document.createElement('button');
     option.type = 'button';
@@ -94,6 +110,7 @@ if (headerInner && !headerInner.querySelector('.language-switcher')) {
     languageMenu.appendChild(option);
   });
 
+  /* 국기 버튼 클릭 시 언어 목록 열기/닫기 */
   languageButton.addEventListener('click', (event) => {
     event.stopPropagation();
     const willOpen = languageMenu.hidden;
@@ -101,6 +118,7 @@ if (headerInner && !headerInner.querySelector('.language-switcher')) {
     languageButton.setAttribute('aria-expanded', String(willOpen));
   });
 
+  /* 메뉴 바깥을 누르면 언어 목록 닫기 */
   document.addEventListener('click', (event) => {
     if (!languageSwitcher.contains(event.target)) {
       languageMenu.hidden = true;
@@ -111,7 +129,13 @@ if (headerInner && !headerInner.querySelector('.language-switcher')) {
   headerInner.appendChild(languageSwitcher);
 }
 
-// Hero slider: 마크업과 디자인은 index.html / styles.css에서 수정합니다.
+/* =========================================================
+   03. HERO 3페이지 슬라이더 동작
+   1번 메인 / 2번 라이선스 / 3번 클린 설치
+   문구 = index.html
+   디자인 = styles.css
+   움직임 = 여기 script.js
+   ========================================================= */
 const track = document.querySelector('.hero-slider-track');
 const viewport = document.querySelector('.hero-slider-viewport');
 const prevButton = document.querySelector('.hero-slider-prev');
@@ -126,27 +150,33 @@ if (track && viewport && prevButton && nextButton && pauseButton && countCurrent
   let autoTimer = null;
   let pointerStartX = null;
 
+  /* 원하는 슬라이드 번호로 이동 */
   function showSlide(index) {
     currentSlide = (index + slides.length) % slides.length;
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
     countCurrent.textContent = String(currentSlide + 1);
   }
 
+  /* ★ 자동으로 넘어가는 시간 ★
+     6500 = 6.5초 / 10000 = 10초 */
   function restartAuto() {
     window.clearInterval(autoTimer);
     if (!isPaused) autoTimer = window.setInterval(() => showSlide(currentSlide + 1), 6500);
   }
 
+  /* 이전 버튼 */
   prevButton.addEventListener('click', () => {
     showSlide(currentSlide - 1);
     restartAuto();
   });
 
+  /* 다음 버튼 */
   nextButton.addEventListener('click', () => {
     showSlide(currentSlide + 1);
     restartAuto();
   });
 
+  /* 일시정지 / 다시 재생 버튼 */
   pauseButton.addEventListener('click', () => {
     isPaused = !isPaused;
     pauseButton.textContent = isPaused ? '▶' : 'Ⅱ';
@@ -154,10 +184,12 @@ if (track && viewport && prevButton && nextButton && pauseButton && countCurrent
     restartAuto();
   });
 
+  /* 마우스/손가락으로 좌우 밀기 시작 */
   viewport.addEventListener('pointerdown', (event) => {
     pointerStartX = event.clientX;
   });
 
+  /* 좌우로 45px 이상 밀면 이전/다음 슬라이드로 이동 */
   viewport.addEventListener('pointerup', (event) => {
     if (pointerStartX === null) return;
     const delta = event.clientX - pointerStartX;
@@ -172,6 +204,7 @@ if (track && viewport && prevButton && nextButton && pauseButton && countCurrent
     pointerStartX = null;
   });
 
+  /* 처음에는 1번 슬라이드에서 시작 */
   showSlide(0);
   restartAuto();
 }
