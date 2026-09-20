@@ -8,6 +8,291 @@
     <title>킹툴즈 KingTools — 무료 유틸리티 소프트웨어</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23155EEF'/%3E%3Cpath d='M18 15v34h9V36l12 13h12L34 31l16-16H38L27 27V15z' fill='white'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./styles.css?v=20260920-letter2px" />
+
+    <!-- =========================================================
+         ★ 최종 HERO 3페이지 슬라이드 디자인 ★
+         1번 파란 메인 / 2번 라이선스 / 3번 클린 설치
+         기존 다른 영역은 그대로 두고 HERO만 최종 시안에 맞게 조정
+         ========================================================= -->
+    <style>
+      /* HERO 전체를 한 장짜리 넓은 배너로 사용 */
+      .hero {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+        padding-top: 32px;
+        padding-bottom: 56px;
+      }
+      .popular-card { display: none !important; }
+      .hero-banner {
+        min-height: 0 !important;
+        aspect-ratio: 16 / 9;
+        border-radius: 34px;
+        box-shadow: 0 28px 70px rgba(12, 49, 117, .12);
+      }
+      .hero-banner::after { display: none !important; }
+      .hero-slider-viewport,
+      .hero-slider-track { height: 100%; }
+      .hero-slide {
+        height: 100%;
+        min-height: 0 !important;
+        grid-template-columns: 1.08fr .92fr;
+        align-items: center;
+        gap: clamp(24px, 3vw, 50px);
+        padding: clamp(54px, 5.2vw, 86px);
+      }
+
+      /* 1번 슬라이드 - 강력한 기능의 무료 소프트웨어 */
+      .hero-slide-main {
+        background:
+          radial-gradient(circle at 70% 16%, rgba(112, 190, 255, .38), transparent 27%),
+          linear-gradient(135deg, #0a42d8 0%, #1267f6 52%, #1746c8 100%);
+      }
+      .hero-slide-main .hero-copy { max-width: 690px; }
+      .hero-slide-main h1 {
+        font-size: clamp(58px, 5.25vw, 88px) !important;
+        line-height: 1.16 !important;
+        letter-spacing: -.035em !important;
+      }
+      .hero-slide-main .hero-copy > p {
+        max-width: 650px;
+        margin-top: 34px;
+        font-size: clamp(18px, 1.3vw, 22px);
+        line-height: 1.7;
+      }
+      .hero-slide-main .hero-actions { margin-top: 42px; gap: 32px; }
+      .hero-slide-main .button-white {
+        min-height: 58px;
+        padding-inline: 28px;
+        font-size: 17px;
+      }
+      .hero-slide-main .text-link { font-size: 16px; }
+      .hero-slide-main .hero-visual { min-height: 470px; }
+      .hero-slide-main .orb-one {
+        width: 310px;
+        height: 310px;
+        right: 24px;
+        top: 70px;
+        background: linear-gradient(145deg, rgba(230, 240, 255, .96), rgba(114, 159, 222, .48));
+        box-shadow: inset -32px -28px 68px rgba(17, 63, 146, .25), 0 36px 58px rgba(4, 29, 88, .20);
+      }
+      .hero-slide-main .orb-two {
+        width: 92px;
+        height: 92px;
+        left: 76px;
+        top: 54px;
+        background: linear-gradient(145deg, #73c8ff, #2f78ea);
+      }
+      .hero-slide-main .utility-stack {
+        width: 118px;
+        height: 118px;
+        border-radius: 30px;
+      }
+      .hero-slide-main .utility-stack-left {
+        left: 28px;
+        bottom: 84px;
+      }
+      .hero-slide-main .utility-stack-center {
+        width: 150px;
+        height: 150px;
+        right: 88px;
+        top: 88px;
+        border-radius: 36px;
+      }
+      .hero-slide-main .utility-stack-right {
+        width: 118px;
+        height: 118px;
+        right: 0;
+        bottom: 68px;
+      }
+      .hero-slide-main .stack-k { font-size: 72px; }
+      .hero-slide-main .visual-caption {
+        right: 76px;
+        bottom: 8px;
+      }
+      .hero-slide-main .visual-caption strong { font-size: 22px; }
+      .hero-slide-main .visual-caption span { font-size: 15px; }
+
+      /* 2번 슬라이드 - 라이선스 프리웨어 */
+      .hero-slide-license {
+        background:
+          radial-gradient(circle at 78% 15%, rgba(70, 143, 255, .28), transparent 29%),
+          linear-gradient(135deg, #061a43 0%, #0a2c6c 55%, #0d438e 100%);
+      }
+      .hero-slide-license .hero-copy { max-width: 660px; }
+      .hero-slide-license h1 {
+        margin: 0;
+        font-size: 0 !important;
+        line-height: 1 !important;
+        letter-spacing: 0 !important;
+      }
+      .hero-slide-license h1::before {
+        content: "라이선스\A프리웨어";
+        white-space: pre;
+        display: block;
+        color: #fff;
+        font-size: clamp(60px, 5.3vw, 88px);
+        line-height: 1.18;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+      .hero-slide-license .hero-special-desc {
+        margin-top: 34px;
+        font-size: clamp(18px, 1.25vw, 21px);
+        line-height: 1.75;
+      }
+      .hero-slide-license .hero-special-points {
+        margin-top: 34px;
+        gap: 14px;
+      }
+      .hero-slide-license .hero-special-points span {
+        min-height: 48px;
+        padding: 10px 18px;
+        background: rgba(255, 255, 255, .055);
+        border-color: rgba(255, 255, 255, .28);
+        font-size: 15px;
+      }
+
+      /* 2번/3번 오른쪽 공통 시각 요소 */
+      .hero-feature-visual {
+        min-height: 470px;
+      }
+      .feature-orbit {
+        width: 390px;
+        height: 390px;
+        right: 10px;
+        top: 20px;
+      }
+      .feature-orbit-license {
+        background: linear-gradient(145deg, rgba(177, 211, 255, .98), rgba(69, 120, 191, .52));
+      }
+      .feature-icon-card {
+        width: 195px;
+        height: 195px;
+        right: 104px;
+        top: 112px;
+        border-radius: 46px;
+      }
+
+      /* 2번 슬라이드 전문적인 문서 + 인증 아이콘 */
+      .feature-icon-license svg { display: none; }
+      .feature-icon-license::before {
+        content: "";
+        width: 106px;
+        height: 106px;
+        display: block;
+        background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Cpath d='M14 7h28l8 8v31H14V7Z' stroke='%230b4ba8' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M42 7v11h11M22 22h15M22 30h15M22 38h10' stroke='%230b4ba8' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='45' cy='43' r='10' fill='white' stroke='%230b4ba8' stroke-width='4'/%3E%3Cpath d='m40 43 4 4 7-8' stroke='%230b4ba8' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='m39 51-2 8 8-4 8 4-2-8' stroke='%230b4ba8' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+      .feature-floating {
+        min-width: 120px;
+        height: 52px;
+        padding-inline: 20px;
+        font-size: 15px;
+      }
+      .feature-floating-a { left: 14px; top: 112px; }
+      .feature-floating-b { right: 0; bottom: 94px; }
+      .feature-caption { right: 72px; bottom: 6px; }
+      .feature-caption strong { font-size: 34px; }
+      .feature-caption span { margin-top: 8px; font-size: 15px; }
+
+      /* 3번 슬라이드 - 100% 클린 설치 */
+      .hero-slide-clean {
+        background:
+          radial-gradient(circle at 80% 16%, rgba(120, 248, 201, .22), transparent 29%),
+          linear-gradient(135deg, #069373 0%, #08a879 53%, #086a51 100%);
+      }
+      .hero-slide-clean .hero-copy { max-width: 680px; }
+      .hero-slide-clean h1 {
+        font-size: clamp(60px, 5.3vw, 88px) !important;
+        line-height: 1.18 !important;
+        letter-spacing: -.02em !important;
+      }
+      .hero-slide-clean .hero-special-desc {
+        margin-top: 34px;
+        font-size: clamp(18px, 1.25vw, 21px);
+        line-height: 1.75;
+      }
+      .hero-slide-clean .hero-special-points {
+        margin-top: 34px;
+        gap: 14px;
+      }
+      .hero-slide-clean .hero-special-points span {
+        min-height: 50px;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, .96);
+        border-color: rgba(255, 255, 255, .9);
+        color: #078a66;
+        font-size: 15px;
+      }
+      .feature-orbit-clean {
+        background: linear-gradient(145deg, rgba(230, 255, 247, .96), rgba(118, 190, 166, .50));
+      }
+      .hero-slide-clean .feature-icon-card {
+        box-shadow: 0 28px 56px rgba(0, 70, 48, .18);
+      }
+
+      /* 하단 슬라이드 컨트롤 */
+      .hero-slider-controls {
+        right: 3.1%;
+        bottom: 4.1%;
+        height: 60px;
+        gap: 7px;
+        padding: 7px 12px;
+        background: rgba(5, 29, 75, .91);
+        box-shadow: 0 18px 38px rgba(0, 0, 0, .18);
+      }
+      .hero-slider-controls button { width: 42px; height: 42px; }
+      .hero-slider-count { min-width: 66px; font-size: 15px; }
+      .hero-slider-count b { font-size: 17px; }
+
+      /* 3번 페이지일 때 컨트롤 상자도 진한 초록색 */
+      .hero-banner:has(.hero-slider-track[style*="-200%"] ) .hero-slider-controls {
+        background: rgba(4, 78, 58, .93);
+      }
+
+      /* 태블릿 */
+      @media (max-width: 1180px) {
+        .hero-banner { aspect-ratio: 16 / 9; }
+        .hero-slide { padding: clamp(42px, 5vw, 64px); }
+        .hero-slide-main .hero-visual,
+        .hero-feature-visual { transform: scale(.88); transform-origin: center; }
+      }
+
+      /* 모바일 */
+      @media (max-width: 760px) {
+        .hero { padding-top: 20px; padding-bottom: 30px; }
+        .hero-banner { aspect-ratio: auto; }
+        .hero-slide {
+          min-height: 760px !important;
+          height: auto;
+          grid-template-columns: 1fr;
+          align-content: space-between;
+          gap: 24px;
+          padding: 42px 28px 92px;
+        }
+        .hero-slide-main h1,
+        .hero-slide-clean h1 { font-size: clamp(42px, 12vw, 58px) !important; }
+        .hero-slide-license h1::before { font-size: clamp(42px, 12vw, 58px); }
+        .hero-slide-main .hero-copy > p,
+        .hero-slide-license .hero-special-desc,
+        .hero-slide-clean .hero-special-desc { font-size: 16px; }
+        .hero-slide-main .hero-visual,
+        .hero-feature-visual {
+          width: min(100%, 360px);
+          min-height: 300px;
+          justify-self: center;
+          transform: scale(.78);
+          transform-origin: center top;
+        }
+        .hero-slider-controls {
+          right: 14px;
+          bottom: 14px;
+          height: 48px;
+          padding: 5px 8px;
+        }
+        .hero-slider-controls button { width: 32px; height: 32px; }
+        .hero-slider-count { min-width: 50px; }
+      }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main">본문으로 바로가기</a>
