@@ -208,3 +208,62 @@ if (track && viewport && prevButton && nextButton && pauseButton && countCurrent
   showSlide(0);
   restartAuto();
 }
+
+/* =========================================================
+   04. 고화질 HERO 이미지 게시
+   1/2/3번 슬라이드에 SVG 원본을 사용하므로 확대해도 선명합니다.
+   기존 이전/다음/자동재생 컨트롤은 그대로 사용합니다.
+   ========================================================= */
+const heroImageSources = [
+  './assets/hero-slide-1-hq.svg?v=20260920-hq1',
+  './assets/hero-slide-2-hq.svg?v=20260920-hq1',
+  './assets/hero-slide-3-hq.svg?v=20260920-hq1'
+];
+
+if (slides.length >= 3) {
+  const heroBanner = document.querySelector('.hero-banner');
+  const heroTrack = document.querySelector('.hero-slider-track');
+
+  if (heroBanner) {
+    heroBanner.style.minHeight = '0';
+    heroBanner.style.aspectRatio = '1672 / 941';
+    heroBanner.style.background = 'transparent';
+  }
+
+  if (viewport) viewport.style.height = '100%';
+  if (heroTrack) heroTrack.style.height = '100%';
+
+  slides.slice(0, 3).forEach((slide, index) => {
+    slide.style.minHeight = '0';
+    slide.style.height = '100%';
+    slide.style.padding = '0';
+    slide.style.display = 'block';
+    slide.style.backgroundImage = `url("${heroImageSources[index]}")`;
+    slide.style.backgroundPosition = 'center';
+    slide.style.backgroundRepeat = 'no-repeat';
+    slide.style.backgroundSize = '100% 100%';
+
+    Array.from(slide.children).forEach((child) => {
+      child.style.display = 'none';
+    });
+  });
+
+  const heroImageStyle = document.createElement('style');
+  heroImageStyle.textContent = `
+    .hero-banner::after { display:none !important; }
+    .hero-slider-viewport,
+    .hero-slider-track { height:100% !important; }
+    .hero-slide { min-height:0 !important; height:100% !important; }
+    .hero-slider-controls { z-index:5; }
+
+    @media (max-width:1180px) {
+      .hero-banner { aspect-ratio:1672 / 941 !important; min-height:0 !important; }
+    }
+
+    @media (max-width:760px) {
+      .hero-banner { aspect-ratio:1672 / 941 !important; min-height:0 !important; }
+      .hero-slide { min-height:0 !important; height:100% !important; }
+    }
+  `;
+  document.head.appendChild(heroImageStyle);
+}
