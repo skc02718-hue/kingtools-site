@@ -8,7 +8,10 @@
    - 여백: margin / padding
    ========================================================= */
 
-/* 01. 기본 설정 */
+/* =========================================================
+   01. 기본 설정
+   사이트 전체 색상 / 폰트 / 공통 크기
+   ========================================================= */
 :root {
   --blue: #155eef;
   --blue-2: #0b45c8;
@@ -47,7 +50,10 @@ svg { display: block; }
 .skip-link:focus { transform:translateY(0); }
 :focus-visible { outline:3px solid rgba(21,94,239,.38); outline-offset:4px; }
 
-/* 02. 헤더 */
+/* =========================================================
+   02. 헤더
+   로고 / 상단 메뉴 / 고객센터 버튼
+   ========================================================= */
 .site-header { position:sticky; top:0; z-index:50; border-bottom:1px solid rgba(231,234,240,.8); background:rgba(255,255,255,.92); backdrop-filter:blur(18px); }
 .header-inner { width:var(--shell); min-height:86px; margin-inline:auto; display:flex; align-items:center; gap:36px; }
 .brand { display:inline-flex; align-items:center; gap:11px; flex:0 0 auto; }
@@ -64,7 +70,10 @@ svg { display: block; }
 .menu-button { display:none; margin-left:auto; width:44px; height:44px; padding:10px; border:1px solid var(--line); border-radius:12px; background:#fff; cursor:pointer; }
 .menu-button span:not(.sr-only) { display:block; width:100%; height:2px; margin:5px 0; border-radius:2px; background:var(--ink); }
 
-/* 03. 언어 선택 */
+/* =========================================================
+   03. 언어 선택
+   오른쪽 국기 버튼 / 언어 목록
+   ========================================================= */
 .language-switcher { position:relative; flex:0 0 auto; margin-left:-28px; z-index:1000; }
 .language-button { width:52px; height:40px; display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:0 8px; border:1px solid #e1e5ea; border-radius:9px; background:#fff; color:#344054; cursor:pointer; }
 .language-button:hover { background:#f8fafc; }
@@ -75,27 +84,63 @@ svg { display: block; }
 .language-option { width:100%; height:32px; display:flex; align-items:center; gap:10px; padding:0 14px; border:0; background:transparent; color:#263044; text-align:left; white-space:nowrap; cursor:pointer; font-size:14px; }
 .language-option:hover { background:#f5f7fa; }
 
-/* 04. 메인 HERO 영역 */
+/* =========================================================
+   04. 움직이는 HERO 슬라이더 공통 영역
+   슬라이더 전체 크기 / 움직임 / 공통 배치
+   ========================================================= */
 .hero { padding-top:36px; padding-bottom:50px; display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:22px; }
 .hero-banner { position:relative; min-height:508px; overflow:hidden; border-radius:var(--radius-xl); color:#fff; background:#155eef; }
 .hero-banner::after { content:""; position:absolute; z-index:0; width:420px; height:420px; right:-180px; bottom:-230px; border:1px solid rgba(255,255,255,.24); border-radius:50%; box-shadow:0 0 0 56px rgba(255,255,255,.04),0 0 0 112px rgba(255,255,255,.035); pointer-events:none; }
 .hero-slider-viewport { position:relative; z-index:1; width:100%; overflow:hidden; border-radius:inherit; touch-action:pan-y; }
 .hero-slider-track { display:flex; width:100%; transition:transform .55s cubic-bezier(.22,.8,.24,1); will-change:transform; }
 .hero-slide { flex:0 0 100%; min-width:100%; min-height:508px; display:grid; grid-template-columns:1.05fr .95fr; align-items:center; gap:14px; padding:clamp(48px,5.4vw,76px); position:relative; overflow:hidden; }
+
+/* 1번 슬라이드 배경 - 파란 메인 */
 .hero-slide-main { background:radial-gradient(circle at 83% 21%,rgba(96,165,250,.52),transparent 26%),linear-gradient(135deg,#0b3fd1 0%,#155eef 56%,#1743c2 100%); }
+
+/* 2번 슬라이드 배경 - 라이선스 */
 .hero-slide-license { background:radial-gradient(circle at 82% 18%,rgba(58,129,255,.28),transparent 27%),linear-gradient(135deg,#071d49 0%,#0a2b68 52%,#0a3a86 100%); }
+
+/* 3번 슬라이드 배경 - 클린 설치 */
 .hero-slide-clean { background:radial-gradient(circle at 82% 18%,rgba(108,246,195,.22),transparent 29%),linear-gradient(135deg,#078b69 0%,#08a173 48%,#06694f 100%); }
+
 .hero-copy { position:relative; z-index:2; align-self:center; }
 .eyebrow { display:inline-flex; margin-bottom:18px; color:var(--blue); font-size:13px; font-weight:800; letter-spacing:.13em; }
 .eyebrow-light { color:#bfdbfe; }
 .hero-slide-license .eyebrow { color:#8fc1ff; }
 .hero-slide-clean .eyebrow { color:#c8f5e7; }
-
-/* ★ 제목 자간/줄간격은 여기서 수정하면 됩니다 ★ */
-.hero h1 { margin:0; font-size:clamp(46px,4.45vw,68px); line-height:1.15; letter-spacing:0.2; }
 .hero-copy-special { max-width:580px; z-index:2; }
-.hero-copy-special h1 { font-size:clamp(52px,5vw,76px); line-height:1.08; letter-spacing:0.2; }
 
+/* =========================================================
+   ★ 슬라이더 제목 설정 ★
+   1번 / 2번 / 3번을 각각 따로 수정
+   ========================================================= */
+
+/* 1번 슬라이드 제목 - 강력한 기능의 무료 소프트웨어 */
+.hero-slide-main h1 {
+  margin:0;
+  font-size:clamp(46px,4.45vw,68px);
+  line-height:1.15;
+  letter-spacing:0.2;
+}
+
+/* 2번 슬라이드 제목 - 라이선스: 프리웨어 */
+.hero-slide-license h1 {
+  margin:0;
+  font-size:clamp(52px,5vw,76px);
+  line-height:1.08;
+  letter-spacing:0.2;
+}
+
+/* 3번 슬라이드 제목 - 100% 클린 설치 */
+.hero-slide-clean h1 {
+  margin:0;
+  font-size:clamp(52px,5vw,76px);
+  line-height:1.08;
+  letter-spacing:0.2;
+}
+
+/* 슬라이드 설명글 / 버튼 공통 */
 .hero-copy > p { max-width:520px; margin:24px 0 0; color:rgba(255,255,255,.82); font-size:18px; }
 .hero-special-desc { margin:26px 0 0; color:rgba(255,255,255,.94); font-size:19px; line-height:1.65; }
 .hero-actions { display:flex; align-items:center; gap:26px; margin-top:38px; }
@@ -107,11 +152,15 @@ svg { display: block; }
 .text-link-light { color:#fff; }
 .text-link span { margin-left:5px; }
 
+/* 2번/3번 슬라이드 아래쪽 작은 안내 버튼 */
 .hero-special-points { display:flex; flex-wrap:wrap; gap:12px; margin-top:34px; }
 .hero-special-points span { display:inline-flex; align-items:center; min-height:44px; padding:9px 16px; border:1px solid rgba(255,255,255,.28); border-radius:999px; background:rgba(255,255,255,.08); color:#fff; font-size:14px; font-weight:800; box-shadow:inset 0 1px rgba(255,255,255,.12),0 10px 24px rgba(0,0,0,.08); backdrop-filter:blur(8px); }
 .hero-slide-clean .hero-special-points span { background:rgba(255,255,255,.90); color:#078a66; border-color:rgba(255,255,255,.72); }
 
-/* 05. HERO 1번 일러스트 */
+/* =========================================================
+   05. 1번 슬라이드 오른쪽 일러스트
+   동그라미 / K 카드 / 작은 카드 / 100% FREE
+   ========================================================= */
 .hero-visual { position:relative; min-height:340px; align-self:center; }
 .orb { position:absolute; border-radius:50%; }
 .orb-one { width:210px; height:210px; right:20px; top:44px; background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(158,202,255,.25)); box-shadow:inset -24px -20px 54px rgba(5,43,125,.22),0 34px 50px rgba(4,27,88,.24); }
@@ -126,7 +175,10 @@ svg { display: block; }
 .visual-caption strong { font-size:18px; letter-spacing:.08em; }
 .visual-caption span { margin-top:6px; color:rgba(255,255,255,.7); font-size:13px; }
 
-/* 06. HERO 2/3번 일러스트 */
+/* =========================================================
+   06. 2번/3번 슬라이드 오른쪽 일러스트
+   큰 원 / 흰색 아이콘 카드 / FREE·NO ADS 칩 / 하단 문구
+   ========================================================= */
 .hero-feature-visual { position:relative; min-height:390px; align-self:center; }
 .feature-orbit { position:absolute; width:330px; height:330px; right:14px; top:18px; border-radius:50%; box-shadow:inset -30px -24px 58px rgba(0,0,0,.14),0 34px 62px rgba(0,0,0,.17); }
 .feature-orbit-license { background:linear-gradient(145deg,rgba(177,211,255,.96),rgba(74,127,198,.48)); }
@@ -144,7 +196,10 @@ svg { display: block; }
 .feature-caption strong { font-size:30px; line-height:1.05; letter-spacing:-.02em; }
 .feature-caption span { margin-top:7px; color:rgba(255,255,255,.82); font-size:14px; }
 
-/* 07. 슬라이드 컨트롤 */
+/* =========================================================
+   07. 슬라이드 하단 컨트롤
+   이전 / 현재 페이지 / 다음 / 일시정지
+   ========================================================= */
 .hero-slider-controls { position:absolute; z-index:8; right:24px; bottom:22px; height:52px; display:inline-flex; align-items:center; gap:6px; padding:6px 9px; border-radius:999px; background:rgba(7,26,61,.82); box-shadow:0 16px 32px rgba(0,0,0,.2); backdrop-filter:blur(10px); }
 .hero-slider-controls button { width:36px; height:36px; display:grid; place-items:center; padding:0; border:0; border-radius:50%; color:#fff; background:transparent; cursor:pointer; font-size:22px; line-height:1; }
 .hero-slider-controls button:hover { background:rgba(255,255,255,.14); }
@@ -153,7 +208,9 @@ svg { display: block; }
 .hero-slider-count em { padding:0 5px; font-style:normal; }
 .hero-slider-pause { font-size:12px !important; }
 
-/* 08. 많이 찾는 프로그램 */
+/* =========================================================
+   08. 오른쪽 '많이 찾는 프로그램' 카드
+   ========================================================= */
 .popular-card { min-height:508px; padding:30px 28px 22px; display:flex; flex-direction:column; border:1px solid var(--line); border-radius:var(--radius-xl); background:#fff; box-shadow:0 10px 30px rgba(16,24,40,.04); }
 .popular-heading { display:flex; align-items:baseline; justify-content:space-between; gap:14px; padding:2px 2px 18px; }
 .popular-heading h2 { margin:0; font-size:19px; letter-spacing:-.02em; }
@@ -168,7 +225,10 @@ svg { display: block; }
 .popular-list i { font-style:normal; }
 .popular-more { margin-top:auto; min-height:50px; padding:12px 18px; display:flex; align-items:center; justify-content:space-between; border-radius:15px; color:#fff; background:var(--navy); font-size:14px; font-weight:750; }
 
-/* 09. 평생 무료 / 제휴 설치 없음 / 광고 없음 / 개인정보 수집 없음 */
+/* =========================================================
+   09. 네 가지 이용 혜택
+   평생 무료 / 제휴 설치 없음 / 광고 없음 / 개인정보 수집 없음
+   ========================================================= */
 .trust-strip { background:#fff; }
 .trust-grid { min-height:144px; padding-block:26px; display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
 .trust-grid article { min-width:0; padding:18px 20px; display:flex; align-items:center; gap:14px; border:1px solid rgba(231,234,240,.85); border-radius:18px; background:#fff; box-shadow:0 8px 22px rgba(16,24,40,.035); }
@@ -178,7 +238,10 @@ svg { display: block; }
 .trust-grid strong { font-size:16px; }
 .trust-grid small { margin-top:2px; color:var(--muted); font-size:13px; }
 
-/* 10. 프로그램 카드 */
+/* =========================================================
+   10. 프로그램 카드 전체
+   킹캡처 / 킹플레이어 / 킹집 / 킹뷰 / 킹메모 / 킹캠 / 킹컷 / 킹PDF
+   ========================================================= */
 .section-heading h2 { margin:0; font-size:clamp(34px,3.4vw,48px); line-height:1.18; letter-spacing:-.03em; }
 .section-heading p { margin:10px 0 0; color:var(--muted); font-size:16px; }
 .program-section { padding-block:112px 128px; background:var(--surface); }
@@ -222,7 +285,9 @@ svg { display: block; }
 .open-date { color:#93c5fd; font-weight:800; }
 .coming-arrow { width:40px; height:40px; display:grid; place-items:center; border-radius:50%; background:rgba(255,255,255,.1); }
 
-/* 11. 드리는 말씀 */
+/* =========================================================
+   11. '드리는 말씀' 파란 영역
+   ========================================================= */
 .message-section { margin-block:128px; overflow:hidden; display:grid; grid-template-columns:.82fr 1.18fr; border-radius:var(--radius-xl); color:#fff; background:linear-gradient(125deg,#07317b 0%,#0d50cf 50%,#155eef 100%); box-shadow:0 34px 70px rgba(15,73,176,.22); }
 .message-intro,.message-copy { padding:clamp(48px,5vw,72px); }
 .message-intro { position:relative; border-right:1px solid rgba(255,255,255,.16); }
@@ -240,7 +305,9 @@ svg { display: block; }
 .promise-list strong { font-size:14px; }
 .promise-list small { margin-top:2px; color:rgba(255,255,255,.62); font-size:12px; line-height:1.5; }
 
-/* 12. 파트너십 */
+/* =========================================================
+   12. 파트너십 영역
+   ========================================================= */
 .partnership-section { padding-bottom:128px; }
 .partnership-card { position:relative; overflow:hidden; min-height:440px; padding:clamp(46px,6vw,84px); display:grid; grid-template-columns:.95fr 1.05fr; gap:80px; align-items:center; border:1px solid var(--line); border-radius:var(--radius-xl); background:linear-gradient(135deg,#f8fbff,#eef4ff); }
 .partnership-card::before { content:""; position:absolute; width:280px; height:280px; right:-110px; top:-120px; border:1px solid rgba(21,94,239,.14); border-radius:50%; box-shadow:0 0 0 48px rgba(21,94,239,.035),0 0 0 96px rgba(21,94,239,.025); }
@@ -251,7 +318,10 @@ svg { display: block; }
 .partnership-pin { position:absolute; right:52px; top:42px; width:60px; height:60px; display:grid; place-items:center; border-radius:19px; color:var(--blue); background:#fff; box-shadow:0 16px 34px rgba(21,94,239,.14); }
 .partnership-pin svg { width:31px; height:31px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
 
-/* 13. 푸터 */
+/* =========================================================
+   13. 맨 아래 푸터
+   회사 정보 / 바로가기 / 저작권
+   ========================================================= */
 .site-footer { color:#d0d5dd; background:#101828; }
 .footer-top { padding-block:72px 56px; display:grid; grid-template-columns:1fr .9fr; gap:80px; }
 .brand-footer .brand-copy strong { color:#fff; }
@@ -268,12 +338,18 @@ svg { display: block; }
 .footer-bottom { min-height:78px; display:flex; align-items:center; justify-content:space-between; gap:30px; color:#667085; font-size:13px; }
 .footer-bottom a { color:#d0d5dd; }
 
-/* 14. 데스크톱 80% 보기 */
+/* =========================================================
+   14. 데스크톱 화면
+   PC에서는 전체 페이지를 80% 크기로 표시
+   ========================================================= */
 @media (min-width:1181px) {
   body { zoom:.8; }
 }
 
-/* 15. 태블릿 */
+/* =========================================================
+   15. 태블릿 화면
+   화면 폭 1180px 이하
+   ========================================================= */
 @media (max-width:1180px) {
   :root { --shell:min(100% - 48px,1120px); }
   .header-inner { min-height:76px; }
@@ -300,7 +376,10 @@ svg { display: block; }
   .partnership-card { gap:44px; }
 }
 
-/* 16. 모바일 */
+/* =========================================================
+   16. 모바일 화면
+   화면 폭 760px 이하
+   ========================================================= */
 @media (max-width:760px) {
   :root { --shell:min(100% - 32px,680px); --radius-xl:24px; }
   .header-inner { min-height:70px; }
@@ -310,8 +389,16 @@ svg { display: block; }
   .language-switcher { margin-left:-28px; }
   .hero { padding-top:20px; padding-bottom:28px; gap:14px; }
   .hero-slide { min-height:650px; grid-template-columns:1fr; align-content:space-between; padding:34px 28px; }
-  .hero h1 { font-size:clamp(42px,12vw,58px); }
-  .hero-copy-special h1 { font-size:clamp(46px,12vw,60px); }
+
+  /* 모바일 1번 슬라이드 제목 */
+  .hero-slide-main h1 { font-size:clamp(42px,12vw,58px); }
+
+  /* 모바일 2번 슬라이드 제목 */
+  .hero-slide-license h1 { font-size:clamp(46px,12vw,60px); }
+
+  /* 모바일 3번 슬라이드 제목 */
+  .hero-slide-clean h1 { font-size:clamp(46px,12vw,60px); }
+
   .hero-copy > p,.hero-special-desc { font-size:16px; }
   .hero-actions { margin-top:28px; flex-wrap:wrap; }
   .hero-special-points { margin-top:24px; gap:8px; }
