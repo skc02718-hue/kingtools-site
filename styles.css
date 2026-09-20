@@ -92,9 +92,9 @@ svg { display: block; }
 .hero-slide-clean .eyebrow { color:#c8f5e7; }
 
 /* ★ 제목 자간/줄간격은 여기서 수정하면 됩니다 ★ */
-.hero h1 { margin:0; font-size:clamp(46px,4.45vw,68px); line-height:1.15; letter-spacing:0; }
+.hero h1 { margin:0; font-size:clamp(46px,4.45vw,68px); line-height:1.15; letter-spacing:0.2; }
 .hero-copy-special { max-width:580px; z-index:2; }
-.hero-copy-special h1 { font-size:clamp(52px,5vw,76px); line-height:1.08; letter-spacing:0; }
+.hero-copy-special h1 { font-size:clamp(52px,5vw,76px); line-height:1.08; letter-spacing:0.2; }
 
 .hero-copy > p { max-width:520px; margin:24px 0 0; color:rgba(255,255,255,.82); font-size:18px; }
 .hero-special-desc { margin:26px 0 0; color:rgba(255,255,255,.94); font-size:19px; line-height:1.65; }
