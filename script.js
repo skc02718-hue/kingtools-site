@@ -136,19 +136,6 @@ if (headerInner && !headerInner.querySelector('.language-switcher')) {
    디자인 = styles.css
    움직임 = 여기 script.js
    ========================================================= */
-
-/* ★ 이미지 링크 ★
-   저장소 폴더를 만들지 않고, 이미지가 정상적으로 있던 커밋의 URL을 그대로 사용합니다. */
-const heroSlideImageUrls = [
-  'https://media.githubusercontent.com/media/skc02718-hue/kingtools-site/faeb76bc56e0e646aeaae88f19586cbefdd578b6/assets/hero-slide-1.jpg',
-  'https://media.githubusercontent.com/media/skc02718-hue/kingtools-site/faeb76bc56e0e646aeaae88f19586cbefdd578b6/assets/hero-slide-2.jpg',
-  'https://media.githubusercontent.com/media/skc02718-hue/kingtools-site/faeb76bc56e0e646aeaae88f19586cbefdd578b6/assets/hero-slide-3.jpg'
-];
-
-document.querySelectorAll('.hero-slide-image').forEach((image, index) => {
-  if (heroSlideImageUrls[index]) image.src = heroSlideImageUrls[index];
-});
-
 const track = document.querySelector('.hero-slider-track');
 const viewport = document.querySelector('.hero-slider-viewport');
 const prevButton = document.querySelector('.hero-slider-prev');
