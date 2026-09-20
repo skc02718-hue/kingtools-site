@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941" role="img" aria-labelledby="title desc">
+  <title id="title">라이선스 프리웨어</title>
+  <desc id="desc">KINGTOOLS LICENSE 프리웨어 배너</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071b43"/>
+      <stop offset="0.6" stop-color="#0a337b"/>
+      <stop offset="1" stop-color="#0d54b4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="77%" cy="14%" r="46%">
+      <stop offset="0" stop-color="#3d9cff" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#3d9cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9d8ff"/>
+      <stop offset="1" stop-color="#4e86c8" stop-opacity=".6"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#031839" flood-opacity=".28"/></filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#031839" flood-opacity=".2"/></filter>
+  </defs>
+  <rect width="1672" height="941" rx="54" fill="url(#bg)"/>
+  <rect width="1672" height="941" rx="54" fill="url(#glow)"/>
+  <path d="M1275 941c20-206 130-337 397-390v390Z" fill="#0b4ba0" opacity=".2"/>
+
+  <g font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <text x="104" y="170" fill="#b9d8ff" font-size="27" font-weight="800" letter-spacing="3.4">KINGTOOLS LICENSE</text>
+    <text x="104" y="324" fill="#fff" font-size="102" font-weight="850" letter-spacing="2">라이선스</text>
+    <text x="104" y="454" fill="#fff" font-size="102" font-weight="850" letter-spacing="2">프리웨어</text>
+
+    <text x="104" y="565" fill="#d8e5f8" font-size="30" font-weight="500">개인 · 기업 · 학교 · 기관 누구나 무료입니다.</text>
+    <text x="104" y="615" fill="#d8e5f8" font-size="30" font-weight="500">어떠한 라이선스 비용도 요구하지 않습니다.</text>
+
+    <g fill="rgba(255,255,255,.05)" stroke="#7696c5" stroke-width="2">
+      <rect x="104" y="686" width="150" height="72" rx="36"/>
+      <rect x="272" y="686" width="150" height="72" rx="36"/>
+      <rect x="440" y="686" width="226" height="72" rx="36"/>
+    </g>
+    <g fill="#fff" font-size="24" font-weight="800">
+      <text x="179" y="732" text-anchor="middle">개인 무료</text>
+      <text x="347" y="732" text-anchor="middle">기업 무료</text>
+      <text x="553" y="732" text-anchor="middle">학교·기관 무료</text>
+    </g>
+
+    <circle cx="1204" cy="407" r="245" fill="url(#orb)" filter="url(#shadow)"/>
+    <circle cx="1515" cy="191" r="48" fill="#1c6fff" opacity=".85"/>
+    <circle cx="884" cy="425" r="48" fill="#1d73ff" opacity=".8"/>
+
+    <g filter="url(#soft)"><rect x="872" y="278" width="184" height="74" rx="37" fill="#fff"/></g>
+    <text x="964" y="326" fill="#0b4ba8" font-size="26" font-weight="900" text-anchor="middle">FREE</text>
+
+    <g transform="translate(1051 277) rotate(4 151 136)" filter="url(#shadow)">
+      <rect width="302" height="272" rx="54" fill="#fff"/>
+      <g transform="translate(92 70)" stroke="#1058be" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 0h70l25 24v78H0V0Z" stroke-width="7"/>
+        <path d="M70 0v28h28M18 32h40M18 50h40M18 68h28" stroke-width="7"/>
+        <circle cx="80" cy="86" r="27" fill="#fff" stroke-width="7"/>
+        <path d="m67 86 10 10 18-21" stroke-width="7"/>
+        <path d="m68 107-6 21 18-9 18 9-6-21" stroke-width="7"/>
+      </g>
+    </g>
+
+    <g filter="url(#soft)"><rect x="1332" y="552" width="184" height="74" rx="37" fill="#fff"/></g>
+    <text x="1424" y="600" fill="#0b4ba8" font-size="28" font-weight="900" text-anchor="middle">0원</text>
+
+    <text x="1220" y="714" fill="#fff" font-size="45" font-weight="900" text-anchor="middle">FREEWARE</text>
+    <text x="1220" y="755" fill="#cdddf3" font-size="25" text-anchor="middle">누구나 자유롭게</text>
+  </g>
+</svg>
