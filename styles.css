@@ -265,17 +265,8 @@ svg { display: block; }
   border-right:1px solid rgba(255,255,255,.16);
 }
 .message-intro::before {
-  content:"“";
-  position:absolute;
-  left:28px;
-  top:152px;
-  z-index:0;
-  color:rgba(255,255,255,.10);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:170px;
-  font-weight:700;
-  line-height:.7;
-  pointer-events:none;
+  content:none;
+  display:none;
 }
 .message-intro h2 { margin:0; font-size:22px; }
 .message-lead {
@@ -362,7 +353,6 @@ svg { display: block; }
   .wide-card { grid-column:span 1; }
   .message-section { grid-template-columns:1fr; min-height:0; }
   .message-intro { border-right:0; border-bottom:1px solid rgba(255,255,255,.16); }
-  .message-intro::before { left:28px; top:142px; font-size:150px; }
   .partnership-card { gap:44px; }
 }
 
@@ -422,7 +412,6 @@ svg { display: block; }
   .message-section { width:100%; margin-block:0 90px; border-radius:0; }
   .message-intro,.message-copy { padding:50px 24px; }
   .message-lead { margin-top:56px; font-size:33px; }
-  .message-intro::before { left:10px; top:146px; font-size:120px; }
   .promise-list { grid-template-columns:1fr; margin-top:36px; }
   .partnership-section { padding-bottom:90px; }
   .partnership-card { min-height:auto; padding:48px 26px; grid-template-columns:1fr; gap:34px; }
