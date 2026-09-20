@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941" role="img" aria-labelledby="title desc">
+  <title id="title">강력한 기능의 무료 소프트웨어</title>
+  <desc id="desc">KINGTOOLS FREEWARE SUITE 메인 배너</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0946e7"/>
+      <stop offset="0.56" stop-color="#126bff"/>
+      <stop offset="1" stop-color="#0c43ce"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="14%" r="44%">
+      <stop offset="0" stop-color="#79c3ff" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#79c3ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dcecff" stop-opacity=".96"/>
+      <stop offset="1" stop-color="#75aaf0" stop-opacity=".55"/>
+    </linearGradient>
+    <linearGradient id="smallOrb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8be2ff"/>
+      <stop offset="1" stop-color="#2d74ec"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#05276d" flood-opacity=".24"/>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#04215e" flood-opacity=".20"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1672" height="941" rx="54" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1672" height="941" rx="54" fill="url(#glow)"/>
+  <path d="M1280 941c18-206 128-338 392-390v390Z" fill="#0b51dc" opacity=".28"/>
+  <path d="M1380 941c6-135 98-240 292-286v286Z" fill="#0a3fbd" opacity=".22"/>
+
+  <g font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <text x="128" y="180" fill="#cae2ff" font-size="27" font-weight="800" letter-spacing="3.5">KINGTOOLS FREEWARE SUITE</text>
+
+    <text x="128" y="344" fill="#fff" font-size="99" font-weight="850" letter-spacing="-4">강력한 기능의</text>
+    <text x="128" y="468" fill="#fff" font-size="99" font-weight="850" letter-spacing="-4">무료 소프트웨어</text>
+
+    <text x="132" y="561" fill="#d7e9ff" font-size="32" font-weight="500" letter-spacing="-1">킹툴즈는 무료지만, 유료 소프트웨어보다</text>
+    <text x="132" y="610" fill="#d7e9ff" font-size="32" font-weight="500" letter-spacing="-1">뛰어난 성능을 제공합니다.</text>
+
+    <g filter="url(#soft)">
+      <rect x="128" y="688" width="285" height="92" rx="46" fill="#fff"/>
+    </g>
+    <text x="270" y="746" fill="#0d54d6" font-size="32" font-weight="850" text-anchor="middle">프로그램 보기</text>
+    <text x="456" y="746" fill="#fff" font-size="29" font-weight="800">100% 클린 설치 ↗</text>
+
+    <circle cx="1246" cy="392" r="220" fill="url(#orb)" filter="url(#shadow)"/>
+    <circle cx="972" cy="276" r="61" fill="url(#smallOrb)" filter="url(#soft)"/>
+
+    <g transform="translate(1104 244) rotate(5 126 112)" filter="url(#shadow)">
+      <rect x="0" y="0" width="252" height="224" rx="48" fill="#fff" fill-opacity=".96"/>
+      <text x="126" y="149" fill="#105be6" font-size="104" font-weight="950" font-style="italic" text-anchor="middle">K</text>
+    </g>
+
+    <g transform="translate(888 470) rotate(-8 88 82)" filter="url(#soft)">
+      <rect x="0" y="0" width="176" height="164" rx="38" fill="#fff" fill-opacity=".95"/>
+      <rect x="54" y="48" width="66" height="57" rx="10" fill="none" stroke="#1164eb" stroke-width="6"/>
+      <circle cx="72" cy="64" r="5" fill="#1164eb"/>
+      <path d="M62 94 79 78l14 13 10-9 12 12" fill="none" stroke="#1164eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <g transform="translate(1352 508) rotate(8 84 79)" filter="url(#soft)">
+      <rect x="0" y="0" width="168" height="158" rx="36" fill="#fff" fill-opacity=".95"/>
+      <path d="M59 43h54v72H59z" fill="none" stroke="#1164eb" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M71 62h30M71 77h30M71 92h22" fill="none" stroke="#1164eb" stroke-width="6" stroke-linecap="round"/>
+    </g>
+
+    <text x="1247" y="706" fill="#fff" font-size="41" font-weight="900" text-anchor="middle">100% FREE</text>
+    <text x="1247" y="750" fill="#d4e5ff" font-size="25" font-weight="500" text-anchor="middle">누구나 자유롭게</text>
+  </g>
+</svg>
