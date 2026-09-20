@@ -438,3 +438,61 @@ svg { display: block; }
   html { scroll-behavior:auto; }
   *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
 }
+
+/* =========================================================
+   17. 최신 소식 상태 표시
+   업데이트 / 신규 배지를 오른쪽에 자연스럽게 배치
+   ========================================================= */
+.news-list-compact a {
+  grid-template-columns: 72px minmax(0,1fr) auto !important;
+  gap: 8px !important;
+}
+.news-list-compact strong {
+  min-width: 0;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.news-list-compact a::after {
+  justify-self: end;
+  min-width: 34px;
+  height: 20px;
+  padding: 0 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.02em;
+  white-space: nowrap;
+}
+.news-list-compact li:nth-child(1) a::after,
+.news-list-compact li:nth-child(3) a::after,
+.news-list-compact li:nth-child(4) a::after,
+.news-list-compact li:nth-child(5) a::after {
+  content: "업데이트";
+  color: #5e6b7f;
+  background: #f1f4f8;
+}
+.news-list-compact li:nth-child(2) a::after,
+.news-list-compact li:nth-child(6) a::after {
+  content: "신규";
+  color: #0b78a6;
+  background: #e3f6ff;
+}
+
+@media (max-width:760px) {
+  .news-list-compact a {
+    grid-template-columns: 68px minmax(0,1fr) auto !important;
+    gap: 7px !important;
+  }
+  .news-list-compact a::after {
+    min-width: 30px;
+    height: 19px;
+    padding: 0 6px;
+    font-size: 8px;
+  }
+}
