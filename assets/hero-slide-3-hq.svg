@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941" role="img" aria-labelledby="title desc">
+  <title id="title">100% 클린 설치</title>
+  <desc id="desc">KINGTOOLS PROMISE 클린 설치 배너</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#078d70"/>
+      <stop offset="0.52" stop-color="#08b784"/>
+      <stop offset="1" stop-color="#087455"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="14%" r="46%"><stop offset="0" stop-color="#75f0c7" stop-opacity=".55"/><stop offset="1" stop-color="#75f0c7" stop-opacity="0"/></radialGradient>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9fff0" stop-opacity=".96"/><stop offset="1" stop-color="#72c5a9" stop-opacity=".55"/></linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#034b38" flood-opacity=".24"/></filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#034b38" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="1672" height="941" rx="54" fill="url(#bg)"/>
+  <rect width="1672" height="941" rx="54" fill="url(#glow)"/>
+  <path d="M1270 941c16-195 122-326 402-382v382Z" fill="#087b5e" opacity=".24"/>
+  <path d="M1374 941c12-132 93-223 298-270v270Z" fill="#066c51" opacity=".22"/>
+
+  <g font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <text x="128" y="186" fill="#d7fff1" font-size="27" font-weight="800" letter-spacing="3.6">KINGTOOLS PROMISE</text>
+    <text x="128" y="350" fill="#fff" font-size="112" font-weight="900">100%</text>
+    <text x="128" y="486" fill="#fff" font-size="104" font-weight="850" letter-spacing="-2">클린 설치</text>
+
+    <text x="128" y="585" fill="#ddfff4" font-size="31" font-weight="500">킹툴즈 모든 프로그램은 타사 제휴 소프트웨어를</text>
+    <text x="128" y="636" fill="#ddfff4" font-size="31" font-weight="500">끼워 설치하지 않습니다.</text>
+
+    <g filter="url(#soft)">
+      <rect x="128" y="698" width="236" height="76" rx="38" fill="#fff"/>
+      <rect x="382" y="698" width="182" height="76" rx="38" fill="#fff"/>
+      <rect x="582" y="698" width="270" height="76" rx="38" fill="#fff"/>
+    </g>
+    <g fill="#078a66" font-size="24" font-weight="850">
+      <text x="246" y="746" text-anchor="middle">✓ 제휴 설치 없음</text>
+      <text x="473" y="746" text-anchor="middle">✓ 광고 없음</text>
+      <text x="717" y="746" text-anchor="middle">✓ 개인정보 수집 없음</text>
+    </g>
+
+    <circle cx="1211" cy="407" r="246" fill="url(#orb)" filter="url(#shadow)"/>
+
+    <g filter="url(#soft)"><rect x="889" y="283" width="207" height="76" rx="38" fill="#fff"/></g>
+    <text x="992" y="332" fill="#078a66" font-size="25" font-weight="900" text-anchor="middle">NO BUNDLE</text>
+
+    <g transform="translate(1076 280) rotate(-4 150 135)" filter="url(#shadow)">
+      <rect width="300" height="270" rx="54" fill="#fff"/>
+      <g transform="translate(78 59)" stroke="#07956d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M72 0 18 19v42c0 35 22 65 54 77 32-12 54-42 54-77V19L72 0Z" stroke-width="9"/>
+        <path d="m47 69 18 18 34-42" stroke-width="10"/>
+      </g>
+    </g>
+
+    <g filter="url(#soft)"><rect x="1354" y="572" width="175" height="76" rx="38" fill="#fff"/></g>
+    <text x="1441" y="621" fill="#078a66" font-size="25" font-weight="900" text-anchor="middle">NO ADS</text>
+
+    <text x="1240" y="741" fill="#fff" font-size="43" font-weight="900" text-anchor="middle">100% CLEAN</text>
+    <text x="1240" y="785" fill="#d9f5ea" font-size="25" text-anchor="middle">안심하고 설치</text>
+  </g>
+</svg>
