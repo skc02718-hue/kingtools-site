@@ -496,3 +496,31 @@ svg { display: block; }
     font-size: 8px;
   }
 }
+
+/* =========================================================
+   18. 드리는 말씀 - 따옴표 위치 조정
+   오른쪽 시안처럼 첫 문장에 겹쳐 보이게 배치
+   ========================================================= */
+.message-intro::before {
+  left: 44px !important;
+  top: 188px !important;
+  font-size: 118px !important;
+  color: rgba(255,255,255,.12) !important;
+  line-height: .72 !important;
+}
+
+@media (max-width:1180px) {
+  .message-intro::before {
+    left: 34px !important;
+    top: 176px !important;
+    font-size: 110px !important;
+  }
+}
+
+@media (max-width:760px) {
+  .message-intro::before {
+    left: 6px !important;
+    top: 142px !important;
+    font-size: 86px !important;
+  }
+}
