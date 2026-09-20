@@ -3,3 +3,8 @@
 .news-section {
   display: none !important;
 }
+
+/* Make the benefits row white, including the area behind the four cards. */
+.trust-strip {
+  background: #ffffff !important;
+}
