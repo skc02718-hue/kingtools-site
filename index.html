@@ -7,16 +7,86 @@
     <meta name="theme-color" content="#155EEF" />
     <title>킹툴즈 KingTools — 무료 유틸리티 소프트웨어</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23155EEF'/%3E%3Cpath d='M18 15v34h9V36l12 13h12L34 31l16-16H38L27 27V15z' fill='white'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=20260920-fit1" />
+    <link rel="stylesheet" href="./styles.css?v=20260920-finalhero" />
 
     <!-- =========================================================
-         HERO + 최신 소식 배치
-         슬라이드 내부는 styles.css의 기본 크기를 사용해서
-         1/2/3페이지 모두 네모 배너 안에 들어오도록 유지
+         ★ 최종 HERO 3페이지 디자인 ★
+         사용자가 확정한 1/2/3번 배너 디자인을 벡터로 재현
+         확대해도 선명하게 유지됩니다.
          ========================================================= -->
     <style>
-      /* HERO 오른쪽 최신 소식 카드 */
+      .hero {
+        grid-template-columns: minmax(0, 1fr) 340px !important;
+        gap: 22px !important;
+        align-items: stretch !important;
+      }
+      .hero-banner {
+        position: relative;
+        min-height: 0 !important;
+        height: auto !important;
+        aspect-ratio: 1792 / 1024 !important;
+        overflow: hidden !important;
+        border-radius: 0 !important;
+        background: #fff !important;
+        box-shadow: none !important;
+      }
+      .hero-banner::after { display: none !important; }
+      .hero-slider-viewport,
+      .hero-slider-track,
+      .hero-slide { height: 100% !important; min-height: 0 !important; }
+      .hero-slider-track { display: flex !important; }
+      .hero-slide.hero-final-slide {
+        display: block !important;
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        background: #fff !important;
+        overflow: hidden;
+      }
+      .hero-final-art {
+        display: block;
+        width: 100%;
+        height: 100%;
+        shape-rendering: geometricPrecision;
+        text-rendering: geometricPrecision;
+      }
+      .hero-slider-controls {
+        right: 4.6% !important;
+        bottom: 5.0% !important;
+        width: 24% !important;
+        min-width: 230px !important;
+        max-width: 345px !important;
+        height: clamp(52px, 4.8vw, 78px) !important;
+        padding: 0 16px !important;
+        gap: 8px !important;
+        border-radius: 999px !important;
+        background: rgba(7, 38, 93, .96) !important;
+        box-shadow: 0 14px 32px rgba(0,0,0,.16) !important;
+        z-index: 30;
+      }
+      .hero-slider-controls button {
+        flex: 1;
+        width: auto !important;
+        height: 100% !important;
+        color: #fff !important;
+        font-size: clamp(18px, 1.65vw, 29px) !important;
+      }
+      .hero-slider-count {
+        min-width: 74px !important;
+        color: #dce8ff !important;
+        font-size: clamp(15px, 1.2vw, 21px) !important;
+      }
+      .hero-slider-count b {
+        color: #fff !important;
+        font-size: 1.18em !important;
+      }
+      .hero-banner:has(.hero-slider-track[style*="-200%"] ) .hero-slider-controls {
+        background: rgba(2, 77, 58, .96) !important;
+      }
+
+      /* HERO 오른쪽 최신 소식 */
       .news-card {
+        height: 100%;
         min-height: 508px;
         padding: 30px 28px 22px;
         display: flex;
@@ -26,66 +96,34 @@
         background: #fff;
         box-shadow: 0 10px 30px rgba(16,24,40,.04);
       }
-      .news-kicker {
-        color: #155eef;
-        font-size: 12px;
-        font-weight: 900;
-        letter-spacing: .13em;
-      }
-      .news-heading {
-        margin: 8px 0 0;
-        font-size: 34px;
-        line-height: 1.08;
-        letter-spacing: -.04em;
-      }
-      .news-description {
-        margin: 10px 0 0;
-        color: #667085;
-        font-size: 13px;
-        line-height: 1.55;
-      }
-      .news-list-compact {
-        margin: 24px 0 0;
-        padding: 0;
-        list-style: none;
-        border-top: 2px solid #98a2b3;
-      }
-      .news-list-compact li { border-bottom: 1px solid #e7eaf0; }
-      .news-list-compact a {
-        min-height: 59px;
-        display: grid;
-        grid-template-columns: 88px minmax(0,1fr);
-        align-items: center;
-        gap: 10px;
-      }
-      .news-list-compact time {
-        color: #98a2b3;
-        font-size: 11px;
-        font-variant-numeric: tabular-nums;
-      }
-      .news-list-compact strong {
-        font-size: 13px;
-        line-height: 1.4;
-      }
-      .news-list-compact a:hover strong { color: #155eef; }
+      .news-kicker { color:#155eef; font-size:12px; font-weight:900; letter-spacing:.13em; }
+      .news-heading { margin:8px 0 0; font-size:34px; line-height:1.08; letter-spacing:-.04em; }
+      .news-description { margin:10px 0 0; color:#667085; font-size:13px; line-height:1.55; }
+      .news-list-compact { margin:24px 0 0; padding:0; list-style:none; border-top:2px solid #98a2b3; }
+      .news-list-compact li { border-bottom:1px solid #e7eaf0; }
+      .news-list-compact a { min-height:59px; display:grid; grid-template-columns:88px minmax(0,1fr); align-items:center; gap:10px; }
+      .news-list-compact time { color:#98a2b3; font-size:11px; font-variant-numeric:tabular-nums; }
+      .news-list-compact strong { font-size:13px; line-height:1.4; }
+      .news-list-compact a:hover strong { color:#155eef; }
 
-      /* 2번 슬라이드: 전문적인 문서 + 보안 인증 아이콘 */
-      .feature-icon-license svg { width: 96px; height: 96px; }
-
-      /* 3번 페이지에서는 슬라이드 컨트롤도 진한 초록색 */
-      .hero-banner:has(.hero-slider-track[style*="-200%"] ) .hero-slider-controls {
-        background: rgba(4,78,58,.93);
-      }
-
-      /* 태블릿에서는 최신 소식을 HERO 아래로 */
       @media (max-width:1180px) {
-        .news-card { min-height: auto; }
+        .hero { grid-template-columns:1fr !important; }
+        .news-card { height:auto; min-height:auto; }
       }
-
       @media (max-width:760px) {
-        .news-card { padding: 26px 22px 20px; border-radius: 24px; }
-        .news-heading { font-size: 30px; }
-        .news-list-compact a { min-height: 64px; grid-template-columns: 78px 1fr; }
+        .hero-banner { aspect-ratio:1792 / 1024 !important; }
+        .hero-slider-controls {
+          right: 3.5% !important;
+          bottom: 4.2% !important;
+          width: 32% !important;
+          min-width: 160px !important;
+          height: 44px !important;
+          padding: 0 8px !important;
+        }
+        .hero-slider-count { min-width:48px !important; }
+        .news-card { padding:26px 22px 20px; border-radius:24px; }
+        .news-heading { font-size:30px; }
+        .news-list-compact a { min-height:64px; grid-template-columns:78px 1fr; }
       }
     </style>
   </head>
@@ -122,78 +160,150 @@
       <!-- =========================================================
            02. HERO 3페이지 슬라이더 + 최신 소식
            ========================================================= -->
-      <section class="hero section-shell" aria-labelledby="hero-title">
+      <section class="hero section-shell" aria-label="킹툴즈 주요 안내">
+        <h1 class="sr-only">킹툴즈 무료 소프트웨어</h1>
         <div class="hero-banner">
           <div class="hero-slider-viewport">
             <div class="hero-slider-track">
 
               <!-- 1번 슬라이드 -->
-              <section class="hero-slide hero-slide-main" aria-label="강력한 기능의 무료 소프트웨어">
-                <div class="hero-copy">
-                  <span class="eyebrow eyebrow-light">KINGTOOLS FREEWARE SUITE</span>
-                  <h1 id="hero-title">강력한 기능의<br />무료 소프트웨어</h1>
-                  <p>킹툴즈는 무료지만, 유료 소프트웨어보다 뛰어난 성능을 제공합니다.</p>
-                  <div class="hero-actions">
-                    <a class="button button-white" href="#programs">프로그램 보기</a>
-                    <a class="text-link text-link-light" href="#programs">100% 클린 설치 <span aria-hidden="true">↗</span></a>
-                  </div>
-                </div>
-                <div class="hero-visual" aria-hidden="true">
-                  <span class="orb orb-one"></span>
-                  <span class="orb orb-two"></span>
-                  <div class="utility-stack utility-stack-left">
-                    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"></rect><path d="m7 15 3-3 3 3 2-2 3 3"></path><circle cx="8" cy="9" r="1.2"></circle></svg>
-                  </div>
-                  <div class="utility-stack utility-stack-center"><span class="stack-k">K</span></div>
-                  <div class="utility-stack utility-stack-right">
-                    <svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
-                  </div>
-                  <div class="visual-caption"><strong>100% FREE</strong><span>누구나 자유롭게</span></div>
-                </div>
+              <section class="hero-slide hero-final-slide" aria-label="강력한 기능의 무료 소프트웨어">
+                <svg class="hero-final-art" viewBox="0 0 1792 1024" role="img" aria-label="강력한 기능의 무료 소프트웨어" preserveAspectRatio="xMidYMid meet">
+                  <defs>
+                    <linearGradient id="h1bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b49df"/><stop offset=".53" stop-color="#1672ff"/><stop offset="1" stop-color="#0e4edc"/></linearGradient>
+                    <radialGradient id="h1glow" cx="80%" cy="8%" r="58%"><stop offset="0" stop-color="#67c7ff" stop-opacity=".55"/><stop offset="1" stop-color="#67c7ff" stop-opacity="0"/></radialGradient>
+                    <linearGradient id="h1orb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf4ff"/><stop offset=".5" stop-color="#a8c8f4"/><stop offset="1" stop-color="#6b96d6"/></linearGradient>
+                    <linearGradient id="h1small" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#91efff"/><stop offset="1" stop-color="#3682ee"/></linearGradient>
+                    <filter id="h1shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#06255f" flood-opacity=".22"/></filter>
+                  </defs>
+                  <rect width="1792" height="1024" fill="#fff"/>
+                  <rect x="31" y="20" width="1730" height="984" rx="48" fill="url(#h1bg)"/>
+                  <rect x="31" y="20" width="1730" height="984" rx="48" fill="url(#h1glow)"/>
+                  <g font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, Segoe UI, sans-serif">
+                    <text x="162" y="190" fill="#c7ddff" font-size="28" font-weight="800" letter-spacing="3.8">KINGTOOLS FREEWARE SUITE</text>
+                    <text x="162" y="350" fill="#fff" font-size="96" font-weight="800" letter-spacing="-4">강력한 기능의</text>
+                    <text x="162" y="480" fill="#fff" font-size="96" font-weight="800" letter-spacing="-4">무료 소프트웨어</text>
+                    <text x="164" y="590" fill="#dce9ff" font-size="34" font-weight="500">킹툴즈는 무료지만, 유료 소프트웨어보다</text>
+                    <text x="164" y="642" fill="#dce9ff" font-size="34" font-weight="500">뛰어난 성능을 제공합니다.</text>
+                    <a href="#programs" aria-label="프로그램 보기">
+                      <rect x="160" y="730" width="305" height="94" rx="47" fill="#fff" filter="url(#h1shadow)"/>
+                      <text x="312" y="791" text-anchor="middle" fill="#0860df" font-size="34" font-weight="800" text-decoration="underline">프로그램 보기</text>
+                    </a>
+                    <a href="#programs" aria-label="100% 클린 설치">
+                      <text x="515" y="791" fill="#fff" font-size="30" font-weight="800">100% 클린 설치 ↗</text>
+                    </a>
+
+                    <circle cx="1340" cy="420" r="225" fill="url(#h1orb)"/>
+                    <circle cx="1040" cy="300" r="65" fill="url(#h1small)"/>
+                    <g transform="translate(1200 250) rotate(6 145 130)" filter="url(#h1shadow)">
+                      <rect width="290" height="260" rx="48" fill="#fff"/>
+                      <text x="145" y="173" text-anchor="middle" fill="#0a5fe4" font-size="108" font-weight="900" font-style="italic">K</text>
+                    </g>
+                    <g transform="translate(960 500) rotate(-8 82 82)" filter="url(#h1shadow)">
+                      <rect width="164" height="164" rx="38" fill="#fff"/>
+                      <rect x="47" y="45" width="68" height="60" rx="8" fill="none" stroke="#0a5fe4" stroke-width="8"/>
+                      <circle cx="66" cy="64" r="6" fill="#0a5fe4"/>
+                      <path d="M54 98 72 80 87 93 98 84 111 99" fill="none" stroke="#0a5fe4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <g transform="translate(1407 530) rotate(8 82 82)" filter="url(#h1shadow)">
+                      <rect width="164" height="164" rx="38" fill="#fff"/>
+                      <rect x="53" y="38" width="58" height="82" rx="4" fill="none" stroke="#0a5fe4" stroke-width="8"/>
+                      <path d="M66 61h31M66 79h31M66 97h24" stroke="#0a5fe4" stroke-width="8" stroke-linecap="round"/>
+                    </g>
+                    <text x="1325" y="742" text-anchor="middle" fill="#fff" font-size="42" font-weight="900">100% FREE</text>
+                    <text x="1325" y="790" text-anchor="middle" fill="#dce9ff" font-size="27">누구나 자유롭게</text>
+                  </g>
+                </svg>
               </section>
 
               <!-- 2번 슬라이드 -->
-              <section class="hero-slide hero-slide-license" aria-label="라이선스 프리웨어">
-                <div class="hero-copy hero-copy-special">
-                  <span class="eyebrow eyebrow-light">KINGTOOLS LICENSE</span>
-                  <h1 style="letter-spacing:6px !important;">라이선스<br />프리웨어</h1>
-                  <p class="hero-special-desc">개인 · 기업 · 학교 · 기관 누구나 무료입니다.<br />어떠한 라이선스 비용도 요구하지 않습니다.</p>
-                  <div class="hero-special-points"><span>개인 무료</span><span>기업 무료</span><span>학교·기관 무료</span></div>
-                </div>
-                <div class="hero-feature-visual hero-license-visual" aria-hidden="true">
-                  <div class="feature-orbit feature-orbit-license"></div>
-                  <div class="feature-icon-card feature-icon-license">
-                    <svg viewBox="0 0 96 96" fill="none" aria-hidden="true">
-                      <path d="M22 11h38l14 14v42H22V11Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
-                      <path d="M60 11v17h17" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M32 31h19M32 42h22M32 53h16" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
-                      <path d="M67 47 84 54v12c0 11-6.8 20.2-17 24-10.2-3.8-17-13-17-24V54l17-7Z" fill="white" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
-                      <path d="m59 67 6 6 11-13" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <div class="feature-floating feature-floating-a">FREE</div>
-                  <div class="feature-floating feature-floating-b">0₩</div>
-                  <div class="feature-caption"><strong>FREEWARE</strong><span>누구나 자유롭게</span></div>
-                </div>
+              <section class="hero-slide hero-final-slide" aria-label="라이선스 프리웨어">
+                <svg class="hero-final-art" viewBox="0 0 1792 1024" role="img" aria-label="라이선스 프리웨어" preserveAspectRatio="xMidYMid meet">
+                  <defs>
+                    <linearGradient id="h2bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071b43"/><stop offset=".55" stop-color="#0b3377"/><stop offset="1" stop-color="#0f4d9c"/></linearGradient>
+                    <radialGradient id="h2glow" cx="82%" cy="12%" r="58%"><stop offset="0" stop-color="#4c9dff" stop-opacity=".42"/><stop offset="1" stop-color="#4c9dff" stop-opacity="0"/></radialGradient>
+                    <linearGradient id="h2orb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9dcff"/><stop offset=".55" stop-color="#77a9e8"/><stop offset="1" stop-color="#456fa9"/></linearGradient>
+                    <filter id="h2shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#02183e" flood-opacity=".24"/></filter>
+                  </defs>
+                  <rect width="1792" height="1024" fill="#fff"/>
+                  <rect x="8" y="8" width="1776" height="1008" rx="42" fill="url(#h2bg)"/>
+                  <rect x="8" y="8" width="1776" height="1008" rx="42" fill="url(#h2glow)"/>
+                  <g font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, Segoe UI, sans-serif">
+                    <text x="115" y="180" fill="#bcd8ff" font-size="27" font-weight="800" letter-spacing="3.5">KINGTOOLS LICENSE</text>
+                    <text x="115" y="340" fill="#fff" font-size="108" font-weight="800" letter-spacing="2">라이선스</text>
+                    <text x="115" y="500" fill="#fff" font-size="108" font-weight="800" letter-spacing="2">프리웨어</text>
+                    <text x="118" y="620" fill="#d4e0f4" font-size="34" font-weight="500">개인 · 기업 · 학교 · 기관 누구나 무료입니다.</text>
+                    <text x="118" y="672" fill="#d4e0f4" font-size="34" font-weight="500">어떠한 라이선스 비용도 요구하지 않습니다.</text>
+                    <g fill="none" stroke="#6f8fbd" stroke-width="2">
+                      <rect x="115" y="742" width="160" height="70" rx="35"/>
+                      <rect x="298" y="742" width="160" height="70" rx="35"/>
+                      <rect x="482" y="742" width="212" height="70" rx="35"/>
+                    </g>
+                    <text x="195" y="787" text-anchor="middle" fill="#fff" font-size="26" font-weight="800">개인 무료</text>
+                    <text x="378" y="787" text-anchor="middle" fill="#fff" font-size="26" font-weight="800">기업 무료</text>
+                    <text x="588" y="787" text-anchor="middle" fill="#fff" font-size="26" font-weight="800">학교·기관 무료</text>
+
+                    <circle cx="1290" cy="425" r="245" fill="url(#h2orb)"/>
+                    <g transform="translate(1125 295) rotate(5 145 145)" filter="url(#h2shadow)">
+                      <rect width="290" height="290" rx="54" fill="#fff"/>
+                      <g transform="translate(67 58)" stroke="#0a55b8" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 5h77l28 28v85H15V5Z"/>
+                        <path d="M92 5v33h34"/>
+                        <path d="M36 49h40M36 70h47M36 91h34"/>
+                        <circle cx="108" cy="112" r="28" fill="#fff"/>
+                        <path d="m94 112 11 11 20-24"/>
+                        <path d="m95 137-5 19 18-9 18 9-5-19"/>
+                      </g>
+                    </g>
+                    <g filter="url(#h2shadow)"><rect x="930" y="305" width="190" height="80" rx="40" fill="#fff"/><text x="1025" y="357" text-anchor="middle" fill="#0a4da7" font-size="29" font-weight="900">FREE</text></g>
+                    <g filter="url(#h2shadow)"><rect x="1415" y="612" width="178" height="78" rx="39" fill="#fff"/><text x="1504" y="663" text-anchor="middle" fill="#0a4da7" font-size="30" font-weight="900">0원</text></g>
+                    <text x="1295" y="785" text-anchor="middle" fill="#fff" font-size="45" font-weight="900">FREEWARE</text>
+                    <text x="1295" y="833" text-anchor="middle" fill="#d5e2f5" font-size="26">누구나 자유롭게</text>
+                  </g>
+                </svg>
               </section>
 
               <!-- 3번 슬라이드 -->
-              <section class="hero-slide hero-slide-clean" aria-label="100% 클린 설치">
-                <div class="hero-copy hero-copy-special">
-                  <span class="eyebrow eyebrow-light">KINGTOOLS PROMISE</span>
-                  <h1>100%<br />클린 설치</h1>
-                  <p class="hero-special-desc">킹툴즈 모든 프로그램은 타사 제휴 소프트웨어를<br />끼워 설치하지 않습니다.</p>
-                  <div class="hero-special-points hero-clean-points"><span>✓ 제휴 설치 없음</span><span>✓ 광고 없음</span><span>✓ 개인정보 수집 없음</span></div>
-                </div>
-                <div class="hero-feature-visual hero-clean-visual" aria-hidden="true">
-                  <div class="feature-orbit feature-orbit-clean"></div>
-                  <div class="feature-icon-card feature-icon-clean">
-                    <svg viewBox="0 0 64 64" fill="none"><path d="M32 7 11 15v15c0 13 8 24 21 29 13-5 21-16 21-29V15L32 7Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="m22 32 7 7 14-16" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </div>
-                  <div class="feature-floating feature-floating-a clean-chip">NO BUNDLE</div>
-                  <div class="feature-floating feature-floating-b clean-chip">NO ADS</div>
-                  <div class="feature-caption"><strong>100% CLEAN</strong><span>안심하고 설치</span></div>
-                </div>
+              <section class="hero-slide hero-final-slide" aria-label="100% 클린 설치">
+                <svg class="hero-final-art" viewBox="0 0 1792 1024" role="img" aria-label="100% 클린 설치" preserveAspectRatio="xMidYMid meet">
+                  <defs>
+                    <linearGradient id="h3bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#079875"/><stop offset=".50" stop-color="#08b983"/><stop offset="1" stop-color="#07845f"/></linearGradient>
+                    <radialGradient id="h3glow" cx="82%" cy="8%" r="60%"><stop offset="0" stop-color="#72efcc" stop-opacity=".38"/><stop offset="1" stop-color="#72efcc" stop-opacity="0"/></radialGradient>
+                    <linearGradient id="h3orb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e4fff6"/><stop offset=".55" stop-color="#a9decc"/><stop offset="1" stop-color="#6ba98f"/></linearGradient>
+                    <filter id="h3shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#034f3c" flood-opacity=".22"/></filter>
+                  </defs>
+                  <rect width="1792" height="1024" fill="#fff"/>
+                  <rect x="17" y="6" width="1758" height="1012" rx="58" fill="url(#h3bg)"/>
+                  <rect x="17" y="6" width="1758" height="1012" rx="58" fill="url(#h3glow)"/>
+                  <g font-family="Pretendard, Noto Sans KR, Apple SD Gothic Neo, Segoe UI, sans-serif">
+                    <text x="150" y="205" fill="#e2fff5" font-size="27" font-weight="800" letter-spacing="3.6">KINGTOOLS PROMISE</text>
+                    <text x="150" y="385" fill="#fff" font-size="132" font-weight="800">100%</text>
+                    <text x="150" y="530" fill="#fff" font-size="108" font-weight="800" letter-spacing="-2">클린 설치</text>
+                    <text x="152" y="645" fill="#e8fff8" font-size="34" font-weight="500">킹툴즈 모든 프로그램은 타사 제휴 소프트웨어를</text>
+                    <text x="152" y="697" fill="#e8fff8" font-size="34" font-weight="500">끼워 설치하지 않습니다.</text>
+                    <g filter="url(#h3shadow)">
+                      <rect x="150" y="750" width="246" height="74" rx="37" fill="#fff"/>
+                      <rect x="418" y="750" width="190" height="74" rx="37" fill="#fff"/>
+                      <rect x="630" y="750" width="300" height="74" rx="37" fill="#fff"/>
+                    </g>
+                    <text x="273" y="797" text-anchor="middle" fill="#078c68" font-size="25" font-weight="800">✓ 제휴 설치 없음</text>
+                    <text x="513" y="797" text-anchor="middle" fill="#078c68" font-size="25" font-weight="800">✓ 광고 없음</text>
+                    <text x="780" y="797" text-anchor="middle" fill="#078c68" font-size="25" font-weight="800">✓ 개인정보 수집 없음</text>
+
+                    <circle cx="1298" cy="420" r="248" fill="url(#h3orb)"/>
+                    <g transform="translate(1138 302) rotate(-4 145 145)" filter="url(#h3shadow)">
+                      <rect width="290" height="290" rx="56" fill="#fff"/>
+                      <g transform="translate(72 62)" stroke="#07956f" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M72 0 10 22v44c0 40 24 74 62 90 38-16 62-50 62-90V22L72 0Z"/>
+                        <path d="m42 75 20 20 44-53"/>
+                      </g>
+                    </g>
+                    <g filter="url(#h3shadow)"><rect x="950" y="315" width="210" height="78" rx="39" fill="#fff"/><text x="1055" y="366" text-anchor="middle" fill="#078760" font-size="27" font-weight="900">NO BUNDLE</text></g>
+                    <g filter="url(#h3shadow)"><rect x="1405" y="610" width="184" height="78" rx="39" fill="#fff"/><text x="1497" y="661" text-anchor="middle" fill="#078760" font-size="27" font-weight="900">NO ADS</text></g>
+                    <text x="1310" y="785" text-anchor="middle" fill="#fff" font-size="46" font-weight="900">100% CLEAN</text>
+                    <text x="1310" y="835" text-anchor="middle" fill="#e5fff6" font-size="26">안심하고 설치</text>
+                  </g>
+                </svg>
               </section>
             </div>
           </div>
