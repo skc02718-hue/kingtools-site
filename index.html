@@ -14,39 +14,7 @@
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23155EEF'/%3E%3Cpath d='M18 15v34h9V36l12 13h12L34 31l16-16H38L27 27V15z' fill='white'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260920-clean2" />
-    <style>
-      .trust-strip { background: #fff !important; }
-      @media (min-width: 1181px) {
-        body { zoom: .8; }
-      }
-      .hero-banner .hero-slide-license {
-        background: radial-gradient(circle at 82% 18%, rgba(58,129,255,.28), transparent 27%), linear-gradient(135deg,#071d49 0%,#0a2b68 52%,#0a3a86 100%) !important;
-      }
-      .hero-banner .hero-slide-license .eyebrow { color:#8fc1ff !important; }
-      .hero-banner .hero-slide-license .feature-orbit {
-        background: linear-gradient(145deg, rgba(177,211,255,.96), rgba(74,127,198,.48)) !important;
-        box-shadow: inset -30px -24px 58px rgba(4,32,88,.22), 0 34px 62px rgba(0,0,0,.18) !important;
-      }
-      .hero-banner .hero-slide-license .feature-icon-card { color:#0b4ba8 !important; }
-      .hero-banner .hero-slide-license .feature-floating { color:#0b3f8e !important; }
-      .hero-banner .hero-slide-license .hero-special-points span {
-        background:rgba(255,255,255,.08) !important; color:#fff !important; border-color:rgba(255,255,255,.28) !important;
-      }
-      .hero-banner .hero-slide-clean {
-        background: radial-gradient(circle at 82% 18%, rgba(108,246,195,.22), transparent 29%), linear-gradient(135deg,#078b69 0%,#08a173 48%,#06694f 100%) !important;
-      }
-      .hero-banner .hero-slide-clean .eyebrow { color:#c8f5e7 !important; }
-      .hero-banner .hero-slide-clean .feature-orbit {
-        background:linear-gradient(145deg,rgba(230,255,247,.92),rgba(139,207,183,.44)) !important;
-        box-shadow:inset -30px -24px 58px rgba(3,76,56,.16),0 34px 62px rgba(0,0,0,.16) !important;
-      }
-      .hero-banner .hero-slide-clean .feature-icon-card { color:#06986d !important; }
-      .hero-banner .hero-slide-clean .feature-floating { color:#057d5d !important; }
-      .hero-banner .hero-slide-clean .hero-special-points span {
-        background:rgba(255,255,255,.90) !important; color:#078a66 !important; border-color:rgba(255,255,255,.72) !important;
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css?v=20260920-clean3" />
   </head>
   <body>
     <a class="skip-link" href="#main">본문으로 바로가기</a>
@@ -81,29 +49,86 @@
     </header>
 
     <main id="main">
+      <!-- HERO: 문구 수정은 여기(index.html), 디자인 수정은 styles.css -->
       <section class="hero section-shell" aria-labelledby="hero-title">
         <div class="hero-banner">
-          <div class="hero-copy">
-            <span class="eyebrow eyebrow-light">KINGTOOLS FREEWARE SUITE</span>
-            <h1 id="hero-title">강력한 기능의<br />무료 소프트웨어</h1>
-            <p>킹툴즈는 무료지만, 유료 소프트웨어보다 뛰어난 성능을 제공합니다.</p>
-            <div class="hero-actions">
-              <a class="button button-white" href="#programs">프로그램 보기</a>
-              <a class="text-link text-link-light" href="#programs">100% 클린 설치 <span aria-hidden="true">↗</span></a>
+          <div class="hero-slider-viewport">
+            <div class="hero-slider-track">
+              <!-- 1번 슬라이드 -->
+              <section class="hero-slide hero-slide-main" aria-label="강력한 기능의 무료 소프트웨어">
+                <div class="hero-copy">
+                  <span class="eyebrow eyebrow-light">KINGTOOLS FREEWARE SUITE</span>
+                  <h1 id="hero-title">강력한 기능의<br />무료 소프트웨어</h1>
+                  <p>킹툴즈는 무료지만, 유료 소프트웨어보다 뛰어난 성능을 제공합니다.</p>
+                  <div class="hero-actions">
+                    <a class="button button-white" href="#programs">프로그램 보기</a>
+                    <a class="text-link text-link-light" href="#programs">100% 클린 설치 <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                  <span class="orb orb-one"></span>
+                  <span class="orb orb-two"></span>
+                  <div class="utility-stack utility-stack-left">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"></rect><path d="m7 15 3-3 3 3 2-2 3 3"></path><circle cx="8" cy="9" r="1.2"></circle></svg>
+                  </div>
+                  <div class="utility-stack utility-stack-center"><span class="stack-k">K</span></div>
+                  <div class="utility-stack utility-stack-right">
+                    <svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
+                  </div>
+                  <div class="visual-caption"><strong>100% FREE</strong><span>누구나 자유롭게</span></div>
+                </div>
+              </section>
+
+              <!-- 2번 슬라이드: 라이선스 -->
+              <section class="hero-slide hero-slide-license" aria-label="라이선스 프리웨어">
+                <div class="hero-copy hero-copy-special">
+                  <span class="eyebrow eyebrow-light">KINGTOOLS LICENSE</span>
+                  <h1>라이선스:<br />프리웨어</h1>
+                  <p class="hero-special-desc">개인 · 기업 · 학교 · 기관 누구나 무료입니다.<br />어떠한 라이선스 비용도 요구하지 않습니다.</p>
+                  <div class="hero-special-points">
+                    <span>개인 무료</span><span>기업 무료</span><span>학교·기관 무료</span>
+                  </div>
+                </div>
+                <div class="hero-feature-visual hero-license-visual" aria-hidden="true">
+                  <div class="feature-orbit feature-orbit-license"></div>
+                  <div class="feature-icon-card feature-icon-license">
+                    <svg viewBox="0 0 64 64" fill="none"><path d="M32 9v40M18 18h28M15 18 7 34h16L15 18Zm34 0-8 16h16L49 18Z" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 34c1 7 13 7 14 0M42 34c1 7 13 7 14 0M21 52h22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+                  </div>
+                  <div class="feature-floating feature-floating-a">FREE</div>
+                  <div class="feature-floating feature-floating-b">0₩</div>
+                  <div class="feature-caption"><strong>FREEWARE</strong><span>누구나 자유롭게</span></div>
+                </div>
+              </section>
+
+              <!-- 3번 슬라이드: 클린 설치 -->
+              <section class="hero-slide hero-slide-clean" aria-label="100% 클린 설치">
+                <div class="hero-copy hero-copy-special">
+                  <span class="eyebrow eyebrow-light">KINGTOOLS PROMISE</span>
+                  <h1>100%<br />클린 설치</h1>
+                  <p class="hero-special-desc">킹툴즈 모든 프로그램은 타사 제휴 소프트웨어를<br />끼워 설치하지 않습니다.</p>
+                  <div class="hero-special-points hero-clean-points">
+                    <span>✓ 제휴 설치 없음</span><span>✓ 광고 없음</span><span>✓ 개인정보 수집 없음</span>
+                  </div>
+                </div>
+                <div class="hero-feature-visual hero-clean-visual" aria-hidden="true">
+                  <div class="feature-orbit feature-orbit-clean"></div>
+                  <div class="feature-icon-card feature-icon-clean">
+                    <svg viewBox="0 0 64 64" fill="none"><path d="M32 7 11 15v15c0 13 8 24 21 29 13-5 21-16 21-29V15L32 7Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="m22 32 7 7 14-16" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <div class="feature-floating feature-floating-a clean-chip">NO BUNDLE</div>
+                  <div class="feature-floating feature-floating-b clean-chip">NO ADS</div>
+                  <div class="feature-caption"><strong>100% CLEAN</strong><span>안심하고 설치</span></div>
+                </div>
+              </section>
             </div>
           </div>
 
-          <div class="hero-visual" aria-hidden="true">
-            <span class="orb orb-one"></span>
-            <span class="orb orb-two"></span>
-            <div class="utility-stack utility-stack-left">
-              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"></rect><path d="m7 15 3-3 3 3 2-2 3 3"></path><circle cx="8" cy="9" r="1.2"></circle></svg>
-            </div>
-            <div class="utility-stack utility-stack-center"><span class="stack-k">K</span></div>
-            <div class="utility-stack utility-stack-right">
-              <svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
-            </div>
-            <div class="visual-caption"><strong>100% FREE</strong><span>누구나 자유롭게</span></div>
+          <div class="hero-slider-controls">
+            <button class="hero-slider-prev" type="button" aria-label="이전 배너">‹</button>
+            <span class="hero-slider-count"><b>1</b><em>/</em>3</span>
+            <button class="hero-slider-next" type="button" aria-label="다음 배너">›</button>
+            <button class="hero-slider-pause" type="button" aria-label="자동 넘김 일시정지">Ⅱ</button>
           </div>
         </div>
 
@@ -119,6 +144,7 @@
         </aside>
       </section>
 
+      <!-- BENEFITS -->
       <section class="trust-strip" aria-label="킹툴즈 이용 혜택">
         <div class="section-shell trust-grid">
           <article><span class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M17 7.5C17 5.6 15 4 12.5 4S8 5.3 8 7.3s1.8 3 4.5 3.7S17 12.8 17 15s-2 4-5 4-5-1.8-5-4"></path></svg></span><div><strong>평생 무료</strong><small>누구나 비용 없이</small></div></article>
@@ -128,6 +154,7 @@
         </div>
       </section>
 
+      <!-- PRODUCTS -->
       <section class="program-section" id="programs" aria-labelledby="program-title">
         <div class="section-shell">
           <div class="section-heading program-heading"><div><span class="eyebrow">ALL PRODUCTS</span><h2 id="program-title">필요한 도구를,<br />한곳에서.</h2></div><p>빠르고 가벼운 일상의 도구를 모두 무료로 만나보세요.</p></div>
@@ -144,11 +171,13 @@
         </div>
       </section>
 
+      <!-- MESSAGE -->
       <section class="message-section section-shell" aria-labelledby="message-title">
         <div class="message-intro"><span class="eyebrow eyebrow-light">A NOTE FROM KINGTOOLS</span><h2 id="message-title">드리는 말씀</h2><p class="message-lead">“모두가 부담 없이<br />쓸 수 있는<br />글로벌 1등 무료<br />프로그램을 만듭니다.”</p><div class="signature"><span></span> 킹툴즈 개발팀 드림</div></div>
         <div class="message-copy"><p>킹툴즈의 모든 프로그램은 평생 무료입니다. 유료로 전환할 계획이 없습니다. 무료로 서비스하고 있지만, 알고 계신 상용 프로그램보다 성능이 뛰어날 것입니다. 광고를 끼워 넣어 사용자에게 불편을 드리지도 않겠습니다.</p><p>저희의 목표는 단기적인 수익이 아니라, 글로벌 1등 무료 프로그램을 만드는 회사가 되는 것입니다. 개발은 즐거운 일이면서 완성될 때까지 고통스럽기도 합니다. 글로벌 1등 할 수 있게 격려 부탁드립니다.</p><ul class="promise-list"><li><span>✓</span><div><strong>평생 무료</strong><small>향후 유료로 전환할 계획이 없습니다</small></div></li><li><span>✓</span><div><strong>광고 없음</strong><small>외부업체 광고로 유저에게 불편을 드리지 않겠습니다</small></div></li><li><span>✓</span><div><strong>누구나 사용 가능</strong><small>개인·기업·학교·관공서 모두 라이선스 구매 없이</small></div></li><li><span>✓</span><div><strong>빠른 개선</strong><small>사용자 의견을 최우선으로 반영합니다</small></div></li></ul></div>
       </section>
 
+      <!-- PARTNERSHIP -->
       <section class="partnership-section section-shell" aria-labelledby="partnership-title"><div class="partnership-card"><div><span class="eyebrow">PARTNERSHIP</span><h2 id="partnership-title">파트너십은<br />만나서 이야기해도 좋습니다</h2></div><div class="partnership-copy"><p>킹툴즈를 만드는 하이퍼포커스는 서울 강남 테헤란로, 2호선 선릉역 근처에 실제 사무실을 두고 있습니다.</p><p>제휴 · 협업 · 공급 등 파트너십을 오프라인으로 논의하고 싶으시면 언제든 들러 주세요. 미리 연락 주시면 차 한 잔 준비해 두겠습니다.</p><a class="button button-blue" href="mailto:dev@hyperfocus.kr">파트너십 문의하기 <span aria-hidden="true">↗</span></a></div><div class="partnership-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></div></div></section>
     </main>
 
@@ -158,6 +187,6 @@
       <div class="section-shell footer-bottom"><p>© KingTools. All rights reserved.</p><a href="#top">맨 위로 <span aria-hidden="true">↑</span></a></div>
     </footer>
 
-    <script src="./script.js?v=20260920-clean2"></script>
+    <script src="./script.js?v=20260920-clean3"></script>
   </body>
 </html>
