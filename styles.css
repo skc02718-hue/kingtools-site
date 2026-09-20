@@ -496,3 +496,36 @@ svg { display: block; }
     font-size: 8px;
   }
 }
+
+/* =========================================================
+   18. 최신 소식 카드 크기 / 위치 조정
+   데스크톱에서 카드를 조금 크게 만들고 왼쪽으로 당김
+   ========================================================= */
+.news-list-compact a::after {
+  content: none !important;
+  display: none !important;
+}
+
+@media (min-width:1181px) {
+  .hero {
+    grid-template-columns: minmax(0,1fr) 380px;
+    gap: 14px;
+  }
+  .hero .news-card {
+    padding: 32px 30px 24px !important;
+    border-radius: 28px !important;
+    box-shadow: 0 18px 44px rgba(16,24,40,.07) !important;
+  }
+  .hero .news-heading {
+    font-size: 36px !important;
+  }
+  .hero .news-description {
+    font-size: 13.5px !important;
+  }
+  .hero .news-list-compact {
+    margin-top: 26px !important;
+  }
+  .hero .news-list-compact a {
+    min-height: 62px !important;
+  }
+}
