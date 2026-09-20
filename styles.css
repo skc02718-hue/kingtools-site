@@ -137,7 +137,7 @@ svg { display: block; }
   margin:0;
   font-size:clamp(52px,5vw,76px);
   line-height:1.08;
-  letter-spacing:0.2px;
+  letter-spacing:0px;
 }
 
 /* 슬라이드 설명글 / 버튼 공통 */
