@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#155EEF" />
     <title>킹툴즈 KingTools — 무료 유틸리티 소프트웨어</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23155EEF'/%3E%3Cpath d='M18 15v34h9V36l12 13h12L34 31l16-16H38L27 27V15z' fill='white'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=20260920-fit1" />
+    <link rel="stylesheet" href="./styles.css?v=20260921-slide2final" />
 
     <!-- =========================================================
          HERO + 최신 소식 배치
@@ -69,8 +69,99 @@
       }
       .news-list-compact a:hover strong { color: #155eef; }
 
-      /* 2번 슬라이드: 전문적인 문서 + 보안 인증 아이콘 */
-      .feature-icon-license svg { width: 96px; height: 96px; }
+      /* =========================================================
+         ★ 2번 슬라이드 최종 디자인 ★
+         사용자가 확정한 라이선스 프리웨어 디자인 기준
+         1번/3번 슬라이드는 건드리지 않음
+         ========================================================= */
+      @media (min-width: 761px) {
+        .hero-slide-license {
+          background:
+            radial-gradient(circle at 82% 16%, rgba(64,145,255,.34), transparent 28%),
+            linear-gradient(135deg,#061a41 0%,#082b66 52%,#0b4f9f 100%);
+        }
+        .hero-slide-license .hero-copy-special { max-width: 520px; }
+        .hero-slide-license .eyebrow {
+          margin-bottom: 20px;
+          color: #9dccff;
+          font-size: 13px;
+          letter-spacing: .12em;
+        }
+        .hero-slide-license h1 {
+          font-size: clamp(54px,5vw,76px);
+          line-height: 1.08;
+          letter-spacing: 1px;
+        }
+        .hero-slide-license .hero-special-desc {
+          margin-top: 28px;
+          color: rgba(235,243,255,.88);
+          font-size: 18px;
+          line-height: 1.58;
+        }
+        .hero-slide-license .hero-special-points {
+          margin-top: 34px;
+          gap: 12px;
+        }
+        .hero-slide-license .hero-special-points span {
+          min-height: 44px;
+          padding: 9px 17px;
+          border-color: rgba(164,196,239,.55);
+          background: rgba(7,42,99,.20);
+          color: #fff;
+          box-shadow: inset 0 1px rgba(255,255,255,.05);
+          backdrop-filter: none;
+        }
+        .hero-license-visual { min-height: 390px; }
+        .hero-license-visual .feature-orbit {
+          width: 320px;
+          height: 320px;
+          right: 10px;
+          top: 24px;
+          background: linear-gradient(145deg,#acd7ff 0%,#79b1ee 48%,#4d82bf 100%);
+          box-shadow: inset -28px -24px 56px rgba(8,45,97,.14),0 30px 56px rgba(2,26,70,.18);
+        }
+        .hero-license-visual .feature-icon-card {
+          width: 170px;
+          height: 170px;
+          right: 82px;
+          top: 94px;
+          border-radius: 40px;
+          background: #fff;
+          box-shadow: 0 26px 48px rgba(2,28,70,.18);
+          transform: rotate(5deg);
+        }
+        .hero-license-visual .feature-icon-license svg {
+          width: 92px;
+          height: 92px;
+        }
+        .hero-license-visual .feature-floating-a {
+          left: 12px;
+          top: 86px;
+          min-width: 112px;
+          height: 48px;
+          font-size: 15px;
+        }
+        .hero-license-visual .feature-floating-b {
+          right: -2px;
+          bottom: 80px;
+          min-width: 108px;
+          height: 48px;
+          font-size: 15px;
+        }
+        .hero-license-visual .feature-caption {
+          right: 54px;
+          bottom: 0;
+        }
+        .hero-license-visual .feature-caption strong {
+          font-size: 29px;
+          letter-spacing: -.01em;
+        }
+        .hero-license-visual .feature-caption span {
+          margin-top: 7px;
+          font-size: 14px;
+          color: rgba(226,238,255,.86);
+        }
+      }
 
       /* 3번 페이지에서는 슬라이드 컨트롤도 진한 초록색 */
       .hero-banner:has(.hero-slider-track[style*="-200%"] ) .hero-slider-controls {
@@ -152,11 +243,11 @@
                 </div>
               </section>
 
-              <!-- 2번 슬라이드 -->
+              <!-- 2번 슬라이드 - 확정 디자인 -->
               <section class="hero-slide hero-slide-license" aria-label="라이선스 프리웨어">
                 <div class="hero-copy hero-copy-special">
                   <span class="eyebrow eyebrow-light">KINGTOOLS LICENSE</span>
-                  <h1 style="letter-spacing:6px !important;">라이선스<br />프리웨어</h1>
+                  <h1>라이선스<br />프리웨어</h1>
                   <p class="hero-special-desc">개인 · 기업 · 학교 · 기관 누구나 무료입니다.<br />어떠한 라이선스 비용도 요구하지 않습니다.</p>
                   <div class="hero-special-points"><span>개인 무료</span><span>기업 무료</span><span>학교·기관 무료</span></div>
                 </div>
@@ -164,15 +255,16 @@
                   <div class="feature-orbit feature-orbit-license"></div>
                   <div class="feature-icon-card feature-icon-license">
                     <svg viewBox="0 0 96 96" fill="none" aria-hidden="true">
-                      <path d="M22 11h38l14 14v42H22V11Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
-                      <path d="M60 11v17h17" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M32 31h19M32 42h22M32 53h16" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
-                      <path d="M67 47 84 54v12c0 11-6.8 20.2-17 24-10.2-3.8-17-13-17-24V54l17-7Z" fill="white" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
-                      <path d="m59 67 6 6 11-13" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M20 10h39l15 15v40H20V10Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+                      <path d="M59 10v17h17" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M31 31h22M31 42h25M31 53h18" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                      <circle cx="68" cy="65" r="17" fill="white" stroke="currentColor" stroke-width="5"/>
+                      <path d="m60 65 6 6 11-13" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M59 79 56 90l12-6 12 6-3-11" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
                     </svg>
                   </div>
                   <div class="feature-floating feature-floating-a">FREE</div>
-                  <div class="feature-floating feature-floating-b">0₩</div>
+                  <div class="feature-floating feature-floating-b">0원</div>
                   <div class="feature-caption"><strong>FREEWARE</strong><span>누구나 자유롭게</span></div>
                 </div>
               </section>
