@@ -129,7 +129,7 @@ svg { display: block; }
   margin:0;
   font-size:clamp(52px,5vw,76px);
   line-height:1.08;
-  letter-spacing:1px;
+  letter-spacing:2px;
 }
 
 /* 3번 슬라이드 제목 - 100% 클린 설치 */
