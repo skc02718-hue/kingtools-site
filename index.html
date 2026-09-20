@@ -12,17 +12,78 @@
     <!-- =========================================================
          ★ 최종 HERO 3페이지 슬라이드 디자인 ★
          1번 파란 메인 / 2번 라이선스 / 3번 클린 설치
-         기존 다른 영역은 그대로 두고 HERO만 최종 시안에 맞게 조정
+         HERO 오른쪽에는 최신 소식 카드 표시
          ========================================================= -->
     <style>
-      /* HERO 전체를 한 장짜리 넓은 배너로 사용 */
+      /* HERO + 최신 소식 2열 배치 */
       .hero {
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
+        grid-template-columns: minmax(0, 1fr) 340px !important;
+        gap: 22px !important;
         padding-top: 32px;
         padding-bottom: 56px;
+        align-items: stretch;
       }
-      .popular-card { display: none !important; }
+
+      /* =========================================================
+         ★ HERO 옆 최신 소식 카드 ★
+         ========================================================= */
+      .popular-card.news-card {
+        display: flex !important;
+        min-height: 0;
+        height: 100%;
+        padding: 36px 30px 24px;
+        border: 1px solid #e7eaf0;
+        border-radius: 34px;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(16,24,40,.04);
+      }
+      .news-kicker {
+        color: #155eef;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: .13em;
+      }
+      .news-heading {
+        margin: 8px 0 0;
+        color: #101828;
+        font-size: 36px;
+        line-height: 1.08;
+        letter-spacing: -.04em;
+      }
+      .news-description {
+        margin: 10px 0 0;
+        color: #667085;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .news-list-compact {
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+        border-top: 2px solid #98a2b3;
+      }
+      .news-list-compact li { border-bottom: 1px solid #e7eaf0; }
+      .news-list-compact a {
+        min-height: 59px;
+        display: grid;
+        grid-template-columns: 88px minmax(0, 1fr);
+        align-items: center;
+        gap: 10px;
+      }
+      .news-list-compact a:hover strong,
+      .news-list-compact a:focus-visible strong { color: #155eef; }
+      .news-list-compact time {
+        color: #98a2b3;
+        font-size: 11px;
+        font-variant-numeric: tabular-nums;
+      }
+      .news-list-compact strong {
+        color: #101828;
+        font-size: 13px;
+        line-height: 1.4;
+        transition: color .16s ease;
+      }
+
       .hero-banner {
         min-height: 0 !important;
         aspect-ratio: 16 / 9;
@@ -251,10 +312,15 @@
 
       /* 태블릿 */
       @media (max-width: 1180px) {
+        .hero {
+          grid-template-columns: 1fr !important;
+          gap: 18px !important;
+        }
         .hero-banner { aspect-ratio: 16 / 9; }
         .hero-slide { padding: clamp(42px, 5vw, 64px); }
         .hero-slide-main .hero-visual,
         .hero-feature-visual { transform: scale(.88); transform-origin: center; }
+        .popular-card.news-card { height: auto; min-height: auto; }
       }
 
       /* 모바일 */
@@ -291,6 +357,9 @@
         }
         .hero-slider-controls button { width: 32px; height: 32px; }
         .hero-slider-count { min-width: 50px; }
+        .popular-card.news-card { padding: 28px 22px 20px; border-radius: 24px; }
+        .news-heading { font-size: 30px; }
+        .news-list-compact a { min-height: 64px; grid-template-columns: 80px 1fr; }
       }
     </style>
   </head>
@@ -362,10 +431,22 @@
           <div class="hero-slider-controls"><button class="hero-slider-prev" type="button" aria-label="이전 배너">‹</button><span class="hero-slider-count"><b>1</b><em>/</em>3</span><button class="hero-slider-next" type="button" aria-label="다음 배너">›</button><button class="hero-slider-pause" type="button" aria-label="자동 넘김 일시정지">Ⅱ</button></div>
         </div>
 
-        <aside class="popular-card" aria-labelledby="popular-title">
-          <div class="popular-heading"><h2 id="popular-title">많이 찾는 프로그램</h2><span>2026.09 기준</span></div>
-          <ol class="popular-list"><li><a href="#kingcapture"><span>1</span><b>킹캡처</b><small>캡처 · 녹화</small><i>→</i></a></li><li><a href="#kingplayer"><span>2</span><b>킹플레이어</b><small>영상 · 음악</small><i>→</i></a></li><li><a href="#kingzip"><span>3</span><b>킹집</b><small>압축 · 해제</small><i>→</i></a></li><li><a href="#kingview"><span>4</span><b>킹뷰</b><small>이미지 보기</small><i>→</i></a></li></ol>
-          <a class="popular-more" href="#programs">전체 프로그램 보기 <span aria-hidden="true">↘</span></a>
+        <!-- =========================================================
+             ★ 최신 소식 ★
+             HERO 오른쪽 카드
+             ========================================================= -->
+        <aside class="popular-card news-card" aria-labelledby="news-title">
+          <span class="news-kicker">NEWS</span>
+          <h2 class="news-heading" id="news-title">최신 소식</h2>
+          <p class="news-description">킹툴즈의 새로운 출시와 업데이트를 확인하세요.</p>
+          <ul class="news-list-compact">
+            <li><a href="#kingcapture"><time datetime="2026-09-15">2026.09.15</time><strong>킹캡처 KingCapture v1.1.0</strong></a></li>
+            <li><a href="#kingcapture"><time datetime="2026-09-07">2026.09.07</time><strong>킹캡처 KingCapture 출시</strong></a></li>
+            <li><a href="#kingcam"><time datetime="2026-08-28">2026.08.28</time><strong>킹캠 KingCam v1.2.0</strong></a></li>
+            <li><a href="#kingview"><time datetime="2026-08-17">2026.08.17</time><strong>킹뷰 v1.1.0</strong></a></li>
+            <li><a href="#kingmemo"><time datetime="2026-08-17">2026.08.17</time><strong>킹메모 v1.3.0</strong></a></li>
+            <li><a href="#kingview"><time datetime="2026-08-12">2026.08.12</time><strong>킹뷰 KingView 출시</strong></a></li>
+          </ul>
         </aside>
       </section>
 
