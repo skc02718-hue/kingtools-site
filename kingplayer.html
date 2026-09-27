@@ -6,7 +6,7 @@
   <meta name="description" content="킹플레이어 KingPlayer - 초고화질 고성능 무료 플레이어" />
   <meta name="theme-color" content="#155EEF" />
   <title>킹플레이어 KingPlayer — KingTools</title>
-  <link rel="stylesheet" href="./kingplayer.css?v=20260928-01" />
+  <link rel="stylesheet" href="./kingplayer.css?v=20260928-pro" />
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 바로가기</a>
@@ -17,7 +17,7 @@
         <span class="brand-mark">K</span>
         <span class="brand-copy"><strong>킹툴즈</strong><small>KingTools</small></span>
       </a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
       <nav class="primary-nav" id="primary-nav" aria-label="주요 메뉴">
         <a class="active" href="./kingplayer.html">킹플레이어</a>
         <a href="./index.html#kingzip">킹집</a>
@@ -29,63 +29,73 @@
         <a href="./index.html#kingpdf">킹PDF</a>
         <a class="nav-support" href="#footer">고객센터</a>
       </nav>
-      <button class="language-button" type="button" aria-label="언어 선택">🇰🇷 <span>▾</span></button>
+      <button class="language-button" type="button" aria-label="언어 선택">KR <span>▾</span></button>
     </div>
   </header>
 
   <nav class="sub-nav" aria-label="킹플레이어 메뉴">
-    <a class="active" href="#intro">안내</a>
-    <a href="#download">다운로드</a>
-    <a href="#features">사용법</a>
-    <a href="#changes">변경사항</a>
-    <a href="#review">리뷰</a>
+    <div class="sub-nav-inner section-shell">
+      <a class="active" href="#intro">안내</a>
+      <a href="#download">다운로드</a>
+      <a href="#features">사용법</a>
+      <a href="#changes">변경사항</a>
+      <a href="#review">리뷰</a>
+    </div>
   </nav>
 
   <main id="main">
-    <section class="player-hero" id="intro">
-      <div class="hero-glow hero-glow-a"></div>
-      <div class="hero-glow hero-glow-b"></div>
-      <div class="hero-inner section-shell">
-        <div class="hero-heading">
-          <span class="eyebrow">KINGTOOLS MEDIA PLAYER</span>
-          <h1><span>킹플레이어</span> KingPlayer</h1>
-          <p>하드웨어 가속으로 모든 동영상/음악파일/스트림을<br />최상급 화질로 빠르게 재생합니다.</p>
+    <section class="product-hero" id="intro">
+      <div class="section-shell hero-grid">
+        <div class="hero-copy">
+          <span class="product-label">KINGPLAYER 2.9.8</span>
+          <h1><span>킹플레이어</span><br />KingPlayer</h1>
+          <p class="hero-description">하드웨어 가속으로 모든 동영상/음악파일/스트림을<br />최상급 화질로 빠르게 재생합니다.</p>
+          <p class="hero-positioning">초고화질 고성능 플레이어</p>
+          <div class="hero-actions" id="download">
+            <a class="primary-button" href="#">무료 다운로드 v2.9.8 <span aria-hidden="true">↓</span></a>
+            <div class="platforms" aria-label="지원 운영체제"><span>Windows</span><span>Android</span></div>
+          </div>
+          <div class="hero-meta" aria-label="제품 특징">
+            <span>평생 무료</span><span>광고 없음</span><span>개인·기업·누구나 무료</span>
+          </div>
         </div>
 
-        <div class="download-card" id="download">
-          <span class="mini-label">FREEWARE PLAYER</span>
-          <h2>초고화질 고성능 플레이어</h2>
-          <a class="download-button" href="#" aria-label="킹플레이어 무료 다운로드 v2.9.8">↓&nbsp;&nbsp;무료 다운로드 v2.9.8</a>
-          <div class="benefit-pills">
-            <span>∞&nbsp; 평생 무료</span><span>⊘&nbsp; 광고 없음</span><span>▦&nbsp; 개인·기업·누구나 무료</span>
+        <div class="player-product-shot" aria-label="킹플레이어 인터페이스 예시">
+          <div class="player-window">
+            <div class="player-titlebar"><span>KingPlayer</span><div class="window-actions"><i></i><i></i><i></i></div></div>
+            <div class="player-screen">
+              <div class="screen-badge">HDR</div>
+              <div class="screen-copy"><small>ULTRA HIGH DEFINITION</small><strong>8K VIDEO</strong></div>
+              <div class="horizon"></div><div class="sun"></div><div class="ridge ridge-a"></div><div class="ridge ridge-b"></div>
+            </div>
+            <div class="seek"><span></span></div>
+            <div class="player-controls"><div>▶</div><div>Ⅱ</div><div>◀◀</div><div>▶▶</div><div class="time">00:17 / 06:22</div><div class="control-tags"><b>HDR</b><b>CC</b><b>4K</b></div></div>
           </div>
-          <div class="os-block">
-            <p>다양한 OS를 지원합니다</p>
-            <div class="os-list"><div class="os-card"><b>⊞</b><span>Windows</span></div><div class="os-card"><b>●</b><span>Android</span></div></div>
-          </div>
+          <div class="shot-caption"><span>HARDWARE ACCELERATION</span><strong>4K · 8K · 16K</strong></div>
         </div>
       </div>
     </section>
 
-    <section class="quick-features section-shell" aria-label="핵심 기능">
-      <article class="feature-card"><div class="feature-icon">▣</div><h3>고품질 영상 렌더링</h3><p>최상급 화질 렌더러. 명도/대비/채도/색상 실시간 조절, 회전/반전 지원. HDR 완전 지원</p></article>
-      <article class="feature-card"><div class="feature-icon">▦</div><h3>하드웨어 가속</h3><p>하드웨어 가속으로 4K,8K,16K 까지 부드럽게 재생. 하드웨어 가속 자동 적용/미지원시 소프트웨어 자동 지원</p></article>
-      <article class="feature-card"><div class="feature-icon">▤</div><h3>모든 코덱 지원</h3><p>65개+ 비디오 코덱, 19개 픽셀 포맷. H.264, HEVC, AV1, VP9, ProRes 등 어떤 영상이든 바로 재생</p></article>
-      <article class="feature-card"><div class="feature-icon">CC</div><h3>완벽한 자막 지원</h3><p>ASS/SSA/SRT/SMI/VTT 렌더링, MKV 내장 자막, 외부 자막, 폰트 설정. AI 자막 자동 생성 (Whisper 로컬 GPU/CPU + OpenAI API) + DeepL 20개+ 언어 번역</p></article>
+    <section class="feature-summary section-shell" aria-label="핵심 기능">
+      <article><span class="feature-no">01</span><h3>고품질 영상 렌더링</h3><p>최상급 화질 렌더러. 명도/대비/채도/색상 실시간 조절, 회전/반전 지원. HDR 완전 지원</p></article>
+      <article><span class="feature-no">02</span><h3>하드웨어 가속</h3><p>하드웨어 가속으로 4K,8K,16K 까지 부드럽게 재생. 하드웨어 가속 자동 적용/미지원시 소프트웨어 자동 지원</p></article>
+      <article><span class="feature-no">03</span><h3>모든 코덱 지원</h3><p>65개+ 비디오 코덱, 19개 픽셀 포맷. H.264, HEVC, AV1, VP9, ProRes 등 어떤 영상이든 바로 재생</p></article>
+      <article><span class="feature-no">04</span><h3>완벽한 자막 지원</h3><p>ASS/SSA/SRT/SMI/VTT 렌더링, MKV 내장 자막, 외부 자막, 폰트 설정. AI 자막 자동 생성 (Whisper 로컬 GPU/CPU + OpenAI API) + DeepL 20개+ 언어 번역</p></article>
     </section>
 
-    <div class="section-divider section-shell"></div>
-
-    <section class="detail-section section-shell" id="features">
-      <div class="visual-card visual-hdr" aria-hidden="true">
-        <div class="mock-window-bar"><span>KingPlayer</span><i></i><i></i><i></i></div>
-        <div class="hdr-scene"><div class="sun"></div><div class="mountain m1"></div><div class="mountain m2"></div><div class="mountain m3"></div></div>
-        <div class="mock-controls"><span>▶</span><span>■</span><span>◀</span><span>▶▶</span><span class="timeline"></span><span>CC</span><span>☰</span></div>
+    <section class="product-section section-shell" id="features">
+      <div class="section-visual dark-visual" aria-hidden="true">
+        <div class="ui-frame">
+          <div class="ui-top"><span>KingPlayer</span><div><i></i><i></i><i></i></div></div>
+          <div class="hdr-demo"><div class="sun-glow"></div><div class="rock rock-a"></div><div class="rock rock-b"></div><div class="thumb-preview"><span>04:35</span></div></div>
+          <div class="ui-seek"><span></span></div>
+          <div class="ui-bottom"><span>▶</span><span>■</span><span>◀</span><span>▶</span><small>00:07 / 06:22</small><b>H/W</b><b>VP90</b><b>AAC</b><b>2.0</b></div>
+        </div>
       </div>
-      <div class="detail-copy">
-        <span class="section-kicker">PLAYBACK ENGINE</span>
-        <h2><span class="accent-icon">⚡</span> 강력한 재생 엔진 &amp; HDR</h2>
-        <ul class="check-list">
+      <div class="section-copy">
+        <span class="section-label">01 · PERFORMANCE</span>
+        <h2>강력한 재생 엔진 &amp; HDR</h2>
+        <ul class="spec-list">
           <li>고품질 렌더링. 4K · 5K · 8K · 16K 완벽 지원</li>
           <li>HDR 완전 지원 (PQ / HLG / Dolby Vision 자동 감지)</li>
           <li>톤매핑 8종 (ACES / Reinhard / Hable / Mobius / BT.2390 / ST.2094-10 등)</li>
@@ -99,11 +109,11 @@
       </div>
     </section>
 
-    <section class="detail-section detail-section-reverse section-shell">
-      <div class="detail-copy">
-        <span class="section-kicker">SMART INTERFACE</span>
-        <h2><span class="accent-icon">●</span> 직관적인 인터페이스 &amp; AI 자막</h2>
-        <ul class="check-list">
+    <section class="product-section product-section-reverse section-shell">
+      <div class="section-copy">
+        <span class="section-label">02 · INTERFACE</span>
+        <h2>직관적인 인터페이스 &amp; AI 자막</h2>
+        <ul class="spec-list">
           <li>마우스 제스처 (우클릭 후 상하좌우 이동해보세요)</li>
           <li>AI 자막 생성 (Whisper) — 로컬 GPU (CUDA / Vulkan) + 클라우드 하이브리드</li>
           <li>컨텍스트 메뉴 "AI 자막" + HDR 서브메뉴 + Ctrl+H 단축키</li>
@@ -113,52 +123,49 @@
           <li>다국어 언어 지원 (OS 언어 자동 감지)</li>
         </ul>
       </div>
-      <div class="visual-card visual-ai" aria-hidden="true">
-        <div class="mock-window-bar"><span>KingPlayer</span><i></i><i></i><i></i></div>
-        <div class="yellow-scene"><div class="subtitle-chip">AI 자막 생성 중…</div><div class="thumb-strip"><b></b><b></b><b></b><b></b><b></b><b></b></div></div>
-        <div class="mock-controls"><span>▶</span><span>■</span><span>◀</span><span>▶▶</span><span class="timeline"></span><span>CC</span><span>⚙</span></div>
+      <div class="section-visual warm-visual" aria-hidden="true">
+        <div class="ui-frame warm-frame">
+          <div class="ui-top"><span>KingPlayer</span><div><i></i><i></i><i></i></div></div>
+          <div class="subtitle-demo">
+            <div class="field"></div>
+            <div class="ai-caption"><small>AI SUBTITLE</small><strong>자막을 자동으로 생성하고 있습니다</strong></div>
+            <div class="thumb-row"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="subtitle-line">Exploring Mysterious</div>
+          </div>
+          <div class="ui-seek"><span></span></div>
+          <div class="ui-bottom"><span>▶</span><span>■</span><span>◀</span><span>▶</span><small>04:20 / 06:22</small><b>CC</b><b>AI</b></div>
+        </div>
       </div>
     </section>
 
-    <div class="section-divider section-shell"></div>
-
-    <section class="detail-section section-shell">
-      <div class="visual-card visual-stream" aria-hidden="true">
-        <div class="mock-window-bar"><span>KingPlayer</span><i></i><i></i><i></i></div>
-        <div class="aurora-scene"><div class="context-menu"><span>파일 열기</span><span>URL 열기</span><span>재생</span><span>영상 크기</span><span>자막</span><span>AI 자막</span><span>환경 설정</span></div></div>
-        <div class="mock-controls"><span>▶</span><span>■</span><span>◀</span><span>▶▶</span><span class="timeline"></span><span>CC</span><span>☰</span></div>
-      </div>
-      <div class="detail-copy compact-copy">
-        <span class="section-kicker">STREAMING</span>
-        <h2><span class="accent-icon">◎</span> URL 스트리밍</h2>
-        <ul class="check-list">
+    <section class="utility-grid section-shell">
+      <article class="utility-card utility-stream">
+        <span class="section-label">03 · STREAMING</span>
+        <h2>URL 스트리밍</h2>
+        <ul class="spec-list compact">
           <li>HTTP/HTTPS/RTSP/MMS 스트림</li>
           <li>라디오 시청</li>
           <li>오디오 스펙트럼</li>
           <li>스트림 모드 UI (LIVE 표시)</li>
         </ul>
-      </div>
-    </section>
+        <div class="stream-ui" aria-hidden="true"><div class="live">LIVE</div><div class="stream-lines"><i></i><i></i><i></i><i></i></div><div class="stream-url">https://media.example/live</div></div>
+      </article>
 
-    <section class="detail-section detail-section-reverse section-shell">
-      <div class="detail-copy compact-copy">
-        <span class="section-kicker">AUDIO EXPERIENCE</span>
-        <h2><span class="accent-icon">♫</span> 오디오 시각화 &amp; 가사</h2>
-        <ul class="check-list">
+      <article class="utility-card utility-audio">
+        <span class="section-label">04 · AUDIO</span>
+        <h2>오디오 시각화 &amp; 가사</h2>
+        <ul class="spec-list compact">
           <li>가사 창 (LRC 자동 로드, 온라인 검색, 싱크 스크롤)</li>
           <li>실시간 스펙트럼</li>
           <li>앨범 아트 표시</li>
         </ul>
-      </div>
-      <div class="audio-showcase" aria-hidden="true">
-        <div class="lyrics-panel"><span>가사</span><p>왜 넘어질<br />그렇게 어린지<br />어둠 스는 나를<br />제대로 봐주는 게</p><div class="bars"></div></div>
-        <div class="album-panel"><div class="album-art">KING<br />PLAYER</div><div class="spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="album-controls">▶ &nbsp; ■ &nbsp; ◀ &nbsp; ▶▶</div></div>
-      </div>
+        <div class="audio-ui" aria-hidden="true"><div class="album-art">KING<br />PLAYER</div><div class="spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+      </article>
     </section>
 
     <section class="final-cta section-shell" id="changes">
-      <div><span class="section-kicker">KINGPLAYER v2.9.8</span><h2>무료로 시작하세요.</h2><p>설치부터 재생까지 깔끔하게. 킹플레이어는 계속 무료입니다.</p></div>
-      <a class="download-button" href="#download">↓&nbsp;&nbsp;무료 다운로드 v2.9.8</a>
+      <div><span class="section-label light">KINGPLAYER 2.9.8</span><h2>초고화질 고성능 플레이어</h2><p>설치부터 재생까지 깔끔하게. 킹플레이어는 계속 무료입니다.</p></div>
+      <a class="cta-button" href="#download">무료 다운로드 v2.9.8 <span aria-hidden="true">↓</span></a>
     </section>
   </main>
 
