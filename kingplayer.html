@@ -3,22 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="킹플레이어 KingPlayer - 초고화질 고성능 무료 플레이어" />
-  <meta name="theme-color" content="#07111f" />
-  <title>킹플레이어 KingPlayer — KingTools</title>
-  <link rel="stylesheet" href="./kingplayer.css?v=20260928-03" />
+  <meta name="description" content="킹플레이어 KingPlayer - 하드웨어 가속으로 모든 동영상/음악파일/스트림을 최상급 화질로 빠르게 재생합니다." />
+  <meta name="theme-color" content="#155EEF" />
+  <title>킹플레이어 KingPlayer — 초고화질 고성능 무료 플레이어</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23155EEF'/%3E%3Cpath d='M18 15v34h9V36l12 13h12L34 31l16-16H38L27 27V15z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./kingplayer.css?v=20260928-main-connected" />
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 바로가기</a>
 
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="header-inner shell">
-      <a class="brand" href="./index.html" aria-label="킹툴즈 홈">
-        <span class="brand-mark">K</span>
+      <a class="brand" href="./index.html" aria-label="킹툴즈 메인 홈페이지">
+        <span class="brand-mark" aria-hidden="true">K</span>
         <span class="brand-copy"><strong>킹툴즈</strong><small>KingTools</small></span>
       </a>
-      <nav class="global-nav" aria-label="주요 메뉴">
-        <a class="active" href="./kingplayer.html">킹플레이어</a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="주요 메뉴">
+        <a class="is-current" href="./kingplayer.html">킹플레이어</a>
         <a href="./index.html#kingzip">킹집</a>
         <a href="./index.html#kingview">킹뷰</a>
         <a href="./index.html#kingmemo">킹메모</a>
@@ -26,169 +32,154 @@
         <a href="./index.html#kingcam">킹캠</a>
         <a href="./index.html#kingcut">킹컷</a>
         <a href="./index.html#kingpdf">킹PDF</a>
+        <a class="nav-support" href="./index.html#footer">고객센터</a>
       </nav>
-      <a class="support-link" href="#footer">고객센터</a>
     </div>
   </header>
 
-  <div class="product-bar">
-    <div class="shell product-bar-inner">
-      <div class="product-name"><strong>KingPlayer</strong><span>v2.9.8</span></div>
-      <nav class="product-nav" aria-label="킹플레이어 메뉴">
-        <a class="active" href="#overview">Overview</a>
-        <a href="#engine">Playback</a>
-        <a href="#interface">Interface</a>
-        <a href="#streaming">Streaming</a>
-        <a href="#download">Download</a>
-      </nav>
-    </div>
-  </div>
-
   <main id="main">
-    <section class="hero" id="overview">
-      <div class="hero-grid shell">
-        <div class="hero-copy">
-          <span class="hero-index">KINGTOOLS / MEDIA</span>
-          <h1>킹플레이어<br><em>KingPlayer</em></h1>
-          <p class="hero-lead">하드웨어 가속으로 모든 동영상/음악파일/스트림을<br>최상급 화질로 빠르게 재생합니다.</p>
-          <div class="hero-actions" id="download">
-            <a class="button button-primary" href="#">무료 다운로드 v2.9.8</a>
-            <a class="button button-ghost" href="#engine">기능 살펴보기</a>
+    <section class="player-hero shell" aria-labelledby="player-title">
+      <div class="hero-copy">
+        <div class="product-id">
+          <span class="play-logo" aria-hidden="true"><i></i></span>
+          <span><strong>킹플레이어</strong><small>KingPlayer</small></span>
+        </div>
+
+        <p class="hero-description">하드웨어 가속으로 모든 동영상/음악파일/스트림을<br />최상급 화질로 빠르게 재생합니다.</p>
+        <h1 id="player-title">초고화질 고성능 플레이어</h1>
+
+        <a class="download-button" href="#download">
+          <span class="download-symbol" aria-hidden="true">↓</span>
+          <strong>무료 다운로드 v2.9.8</strong>
+        </a>
+
+        <div class="benefit-row" aria-label="이용 혜택">
+          <span><b aria-hidden="true">∞</b>평생 무료</span>
+          <span><b aria-hidden="true">⊘</b>광고 없음</span>
+          <span><b aria-hidden="true">●●●</b>개인·기업·누구나 무료</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <span class="decor-circle circle-one"></span>
+        <span class="decor-circle circle-two"></span>
+        <span class="decor-circle circle-three"></span>
+
+        <div class="quality-badge badge-8k"><strong>8K</strong><small>ULTRA HD</small></div>
+        <div class="quality-badge badge-hdr">HDR</div>
+        <div class="quality-badge badge-h264">H.264</div>
+        <div class="quality-badge badge-hevc">HEVC</div>
+        <div class="quality-badge badge-av1">AV1</div>
+
+        <div class="player-window" aria-label="킹플레이어 화면 예시">
+          <div class="player-titlebar">
+            <span class="mini-logo">▶</span><strong>KingPlayer</strong>
+            <span class="window-controls">—　□　×</span>
           </div>
-          <div class="hero-meta">
-            <span>Windows</span><span>Android</span><span>Freeware</span><span>No Ads</span>
+          <div class="video-preview" aria-hidden="true">
+            <svg viewBox="0 0 820 390" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6cb6ff"/><stop offset="1" stop-color="#d8efff"/></linearGradient>
+                <linearGradient id="lakeGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a9ee0"/><stop offset="1" stop-color="#16446f"/></linearGradient>
+              </defs>
+              <rect width="820" height="390" fill="url(#skyGradient)"/>
+              <circle cx="662" cy="78" r="44" fill="#fff8d8" opacity=".82"/>
+              <path d="M0 245 86 189 147 214 229 124 306 198 397 88 476 194 569 137 650 207 729 159 820 226V390H0Z" fill="#eef4f8"/>
+              <path d="M0 260 86 203 147 224 229 146 306 211 397 109 476 207 569 153 650 219 729 176 820 241V390H0Z" fill="#718ba4"/>
+              <path d="M0 286 72 245 135 268 206 230 281 260 347 219 433 266 508 230 586 267 666 236 745 268 820 240V390H0Z" fill="#18464a"/>
+              <rect x="0" y="289" width="820" height="101" fill="url(#lakeGradient)"/>
+              <path d="M18 328c82-18 166-16 247-3s159 19 240 3 169-15 297 4" fill="none" stroke="#a8d8f6" stroke-opacity=".62" stroke-width="3"/>
+              <path d="M20 352c108-11 192-8 282 3s181 8 254-4 156-9 246 2" fill="none" stroke="#d5efff" stroke-opacity=".35" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="progress"><span></span><i></i></div>
+          <div class="player-controls">
+            <span>▶</span><span>|◀</span><span>▶|</span><small>00:42:17 / 01:58:23</small><b>CC</b><span>🔊</span><span>⛶</span>
           </div>
         </div>
 
-        <div class="player-stage" aria-hidden="true">
-          <div class="stage-label">KINGPLAYER / HDR PREVIEW</div>
-          <div class="player-window">
-            <div class="player-topbar"><span>KingPlayer</span><div><i></i><i></i><i></i></div></div>
-            <div class="video-frame">
-              <div class="sky"></div>
-              <div class="sun"></div>
-              <div class="ridge ridge-a"></div>
-              <div class="ridge ridge-b"></div>
-              <div class="ridge ridge-c"></div>
-              <div class="preview-card"><span>04:35</span></div>
-            </div>
-            <div class="player-progress"><b></b></div>
-            <div class="player-controls"><span>▶</span><span>■</span><span>◀</span><span>▶▶</span><small>00:07 / 06:22</small><div class="control-spacer"></div><span>CC</span><span>☰</span><span>⚙</span></div>
-          </div>
-          <div class="stage-note"><span>HDR</span><span>16K</span><span>AI SUBTITLE</span></div>
+        <div class="os-bar">
+          <strong>다양한 OS를 지원합니다</strong>
+          <i></i>
+          <span><b aria-hidden="true">⊞</b>Windows</span>
+          <i></i>
+          <span><b aria-hidden="true">●</b>Android</span>
         </div>
       </div>
     </section>
 
-    <section class="fact-rail shell" aria-label="핵심 특징">
-      <article><span>01</span><div><strong>평생 무료</strong><p>누구나 비용 없이</p></div></article>
-      <article><span>02</span><div><strong>광고 없음</strong><p>재생에만 집중</p></div></article>
-      <article><span>03</span><div><strong>개인·기업 무료</strong><p>라이선스 비용 0원</p></div></article>
-      <article><span>04</span><div><strong>멀티 플랫폼</strong><p>Windows · Android</p></div></article>
+    <section class="features shell" aria-labelledby="features-title">
+      <h2 class="sr-only" id="features-title">킹플레이어 주요 기능</h2>
+
+      <article class="feature-card">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
+        </span>
+        <h3>고품질 영상 렌더링</h3>
+        <p>최상급 화질 렌더러. 명도/대비/채도/색상 실시간 조절,<br />회전/반전 지원. HDR 완전 지원</p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"></rect><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"></path></svg>
+        </span>
+        <h3>하드웨어 가속</h3>
+        <p>하드웨어 가속으로 4K,8K,16K 까지 부드럽게 재생.<br />하드웨어 가속 자동 적용/미지원시 소프트웨어 자동 지원</p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 3v18M16 3v18M4 8h4M4 15h4M16 8h4M16 15h4"></path></svg>
+        </span>
+        <h3>모든 코덱 지원</h3>
+        <p>65개+ 비디오 코덱, 19개 픽셀 포맷. H.264,<br />HEVC, AV1, VP9, ProRes 등 어떤 영상이든<br />바로 재생</p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-icon caption-icon" aria-hidden="true">CC</span>
+        <h3>완벽한 자막 지원</h3>
+        <p>ASS/SSA/SRT/SMI/VTT 렌더링, MKV 내장<br />자막, 외부 자막, 폰트 설정. AI 자막 자동 생성<br />(Whisper 로컬 GPU/CPU + OpenAI API)</p>
+        <p class="feature-note">• DeepL 20개+ 언어 번역</p>
+      </article>
     </section>
 
-    <section class="feature-intro shell">
-      <div class="section-heading">
-        <span>CORE FEATURES</span>
-        <h2>초고화질 고성능 플레이어</h2>
-        <p>복잡한 기능을 앞세우기보다 재생 품질, 가속, 코덱, 자막이라는 기본에 집중했습니다.</p>
-      </div>
-      <div class="feature-lines">
-        <article><b>Rendering</b><h3>고품질 영상 렌더링</h3><p>최상급 화질 렌더러. 명도/대비/채도/색상 실시간 조절, 회전/반전 지원. HDR 완전 지원</p></article>
-        <article><b>Acceleration</b><h3>하드웨어 가속</h3><p>하드웨어 가속으로 4K,8K,16K 까지 부드럽게 재생. 하드웨어 가속 자동 적용/미지원시 소프트웨어 자동 지원</p></article>
-        <article><b>Codec</b><h3>모든 코덱 지원</h3><p>65개+ 비디오 코덱, 19개 픽셀 포맷. H.264, HEVC, AV1, VP9, ProRes 등 어떤 영상이든 바로 재생</p></article>
-        <article><b>Subtitle</b><h3>완벽한 자막 지원</h3><p>ASS/SSA/SRT/SMI/VTT 렌더링, MKV 내장 자막, 외부 자막, 폰트 설정. AI 자막 자동 생성 (Whisper 로컬 GPU/CPU + OpenAI API) + DeepL 20개+ 언어 번역</p></article>
-      </div>
-    </section>
-
-    <section class="dark-section" id="engine">
-      <div class="shell engine-grid">
-        <div class="engine-copy">
-          <span class="section-number">01 / PLAYBACK</span>
-          <h2>강력한 재생 엔진<br>&amp; HDR</h2>
-          <p>영상이 클수록 플레이어의 차이가 드러납니다. KingPlayer는 초고해상도와 HDR 환경을 중심으로 설계했습니다.</p>
-        </div>
-        <div class="spec-list">
-          <div><span>4K · 5K · 8K · 16K</span><p>고품질 렌더링 완벽 지원</p></div>
-          <div><span>PQ / HLG / Dolby Vision</span><p>HDR 자동 감지 및 완전 지원</p></div>
-          <div><span>8 Tone Mappings</span><p>ACES / Reinhard / Hable / Mobius / BT.2390 / ST.2094-10</p></div>
-          <div><span>Windows HDR</span><p>자동 전환 5단계 + SDR 변환 + 로컬 톤매핑</p></div>
-          <div><span>10 / 12 / 16-bit</span><p>HEVC / AV1 10bit 등 고색심도 지원</p></div>
-          <div><span>DXVA2 / D3D11 / CUDA / QuickSync</span><p>하드웨어 가속 자동 선택</p></div>
-          <div><span>0.1x — 4.0x</span><p>피치 보존 재생 속도</p></div>
-          <div><span>AB Repeat / Stream Copy</span><p>구간 반복 및 초고속 구간 자르기</p></div>
-          <div><span>Rotate / Flip / Color</span><p>영상 회전·반전·색상 조정 자동 복원</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="interface-section shell" id="interface">
-      <div class="interface-grid">
-        <div class="interface-copy">
-          <span class="section-number dark">02 / INTERFACE</span>
-          <h2>직관적인 인터페이스<br>&amp; AI 자막</h2>
-          <ul>
-            <li>마우스 제스처 (우클릭 후 상하좌우 이동)</li>
-            <li>AI 자막 생성 (Whisper) — 로컬 GPU + 클라우드 하이브리드</li>
-            <li>컨텍스트 메뉴 “AI 자막” + HDR 서브메뉴 + Ctrl+H</li>
-            <li>다크 테마 / 시크바 썸네일 / 반응형 툴바</li>
-            <li>재생목록 스냅 도킹 / 즐겨찾기</li>
-            <li>OSD / 파일 정보 / 제어창 (F10)</li>
-            <li>다국어 언어 지원 (OS 언어 자동 감지)</li>
-          </ul>
-        </div>
-        <div class="interface-demo" aria-hidden="true">
-          <div class="demo-screen">
-            <div class="demo-top"><span>Exploring Mysteries</span><div>— □ ×</div></div>
-            <div class="demo-scene"></div>
-            <div class="timeline-strip"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="demo-bottom"><span>▶</span><span>■</span><span>◀◀</span><span>▶▶</span><b>04:20 / 06:22</b><span>CC</span><span>☰</span><span>⚙</span></div>
-          </div>
-          <div class="ai-panel"><span>AI SUBTITLE</span><strong>Whisper</strong><p>Local GPU + Cloud Hybrid</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="split-section" id="streaming">
-      <div class="shell split-grid">
-        <article>
-          <span class="section-number dark">03 / STREAMING</span>
-          <h2>URL 스트리밍</h2>
-          <div class="rule"></div>
-          <ul>
-            <li>HTTP/HTTPS/RTSP/MMS 스트림</li>
-            <li>라디오 시청</li>
-            <li>오디오 스펙트럼</li>
-            <li>스트림 모드 UI (LIVE 표시)</li>
-          </ul>
-        </article>
-        <article>
-          <span class="section-number dark">04 / AUDIO</span>
-          <h2>오디오 시각화 &amp; 가사</h2>
-          <div class="rule"></div>
-          <ul>
-            <li>가사 창 (LRC 자동 로드, 온라인 검색, 싱크 스크롤)</li>
-            <li>실시간 스펙트럼</li>
-            <li>앨범 아트 표시</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="download-banner shell">
+    <section class="download-section shell" id="download">
       <div>
         <span>KINGPLAYER v2.9.8</span>
-        <h2>재생에 필요한 것만.<br>나머지는 덜어냈습니다.</h2>
+        <h2>초고화질 재생을<br />지금 바로 무료로.</h2>
+        <p>평생 무료 · 광고 없음 · 개인·기업·누구나 무료</p>
       </div>
-      <a class="button button-light" href="#download">무료 다운로드</a>
+      <a class="download-button download-button-bottom" href="#top"><span class="download-symbol" aria-hidden="true">↓</span><strong>무료 다운로드 v2.9.8</strong></a>
     </section>
   </main>
 
   <footer class="site-footer" id="footer">
-    <div class="shell footer-inner">
-      <div class="footer-brand"><strong>KingTools</strong><span>Free utility software for everyone.</span></div>
-      <p>© KingTools. All rights reserved.</p>
+    <div class="footer-inner shell">
+      <a class="brand footer-brand" href="./index.html" aria-label="킹툴즈 메인 홈페이지">
+        <span class="brand-mark" aria-hidden="true">K</span>
+        <span class="brand-copy"><strong>킹툴즈</strong><small>KingTools</small></span>
+      </a>
+      <p>KingPlayer · 무료 고성능 미디어 플레이어</p>
+      <a href="./index.html">킹툴즈 메인으로 돌아가기 →</a>
     </div>
   </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const nav = document.querySelector('.primary-nav');
+    if (menuButton && nav) {
+      menuButton.addEventListener('click', () => {
+        const open = menuButton.getAttribute('aria-expanded') !== 'true';
+        menuButton.setAttribute('aria-expanded', String(open));
+        nav.classList.toggle('is-open', open);
+      });
+      nav.addEventListener('click', e => {
+        if (e.target.closest('a')) {
+          menuButton.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('is-open');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
