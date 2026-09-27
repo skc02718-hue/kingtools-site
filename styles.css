@@ -130,3 +130,111 @@
     line-height:1.5;
   }
 }
+
+/* =========================================================
+   라이선스 프리웨어 슬라이드 — 두 번째 레퍼런스 기준
+   인증서 아이콘을 더 디테일하게 재구성하고
+   원/카드/칩의 크기와 배치를 레퍼런스에 가깝게 조정합니다.
+   ========================================================= */
+.feature-icon-license svg {
+  display:none !important;
+}
+
+.feature-icon-license::before {
+  content:"";
+  display:block;
+  width:64%;
+  aspect-ratio:1;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120' fill='none'%3E%3Cg stroke='%230B55B7' stroke-width='6.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M27 19h45l18 18v44H27z'/%3E%3Cpath d='M72 19v19h19'/%3E%3Cpath d='M40 43h23M40 56h27M40 69h20'/%3E%3Ccircle cx='82' cy='79' r='18.5' fill='white'/%3E%3Cpath d='m73.5 79 6 6 11-13'/%3E%3Cpath d='m72 95-3 16 13-7 13 7-3-16'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@media (min-width:761px) {
+  .hero-slide-license {
+    background:
+      radial-gradient(circle at 82% 17%, rgba(69,146,255,.36), transparent 29%),
+      linear-gradient(135deg,#06183d 0%,#092b69 50%,#0b52a8 100%) !important;
+  }
+
+  .hero-license-visual {
+    min-height:410px !important;
+  }
+
+  .hero-license-visual .feature-orbit {
+    width:350px !important;
+    height:350px !important;
+    right:0 !important;
+    top:14px !important;
+    background:
+      radial-gradient(circle at 30% 24%,#ddecff 0%,#b8dbfb 26%,#86b8ec 54%,#5c8fcc 78%,#3d68aa 100%) !important;
+    box-shadow:
+      inset 26px 20px 42px rgba(255,255,255,.20),
+      inset -36px -32px 62px rgba(14,49,101,.22),
+      0 32px 58px rgba(1,24,66,.20) !important;
+  }
+
+  .hero-license-visual .feature-icon-card {
+    width:188px !important;
+    height:188px !important;
+    right:81px !important;
+    top:91px !important;
+    border-radius:43px !important;
+    background:#fff !important;
+    box-shadow:0 28px 52px rgba(2,28,70,.19) !important;
+    transform:rotate(5deg) !important;
+  }
+
+  .hero-license-visual .feature-icon-license::before {
+    width:112px;
+  }
+
+  .hero-license-visual .feature-floating-a {
+    left:-4px !important;
+    top:92px !important;
+    min-width:122px !important;
+    height:52px !important;
+    padding-inline:20px !important;
+    font-size:16px !important;
+    font-weight:900 !important;
+    color:#0b4ba8 !important;
+    background:rgba(255,255,255,.97) !important;
+    box-shadow:0 15px 28px rgba(2,28,70,.13) !important;
+  }
+
+  .hero-license-visual .feature-floating-b {
+    right:-12px !important;
+    bottom:70px !important;
+    min-width:118px !important;
+    height:52px !important;
+    padding-inline:20px !important;
+    font-size:16px !important;
+    font-weight:900 !important;
+    color:#0b4ba8 !important;
+    background:rgba(255,255,255,.97) !important;
+    box-shadow:0 15px 28px rgba(2,28,70,.13) !important;
+  }
+
+  .hero-license-visual .feature-caption {
+    right:49px !important;
+    bottom:-7px !important;
+  }
+
+  .hero-license-visual .feature-caption strong {
+    font-size:31px !important;
+    letter-spacing:-.025em !important;
+  }
+
+  .hero-license-visual .feature-caption span {
+    margin-top:7px !important;
+    font-size:14px !important;
+    color:rgba(229,239,255,.84) !important;
+  }
+}
+
+@media (max-width:760px) {
+  .feature-icon-license::before {
+    width:72px;
+  }
+}
