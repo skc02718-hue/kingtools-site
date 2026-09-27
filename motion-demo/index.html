@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#155EEF" />
+  <meta name="description" content="KingTools motion UI concept" />
+  <title>KingTools — Motion UI Concept</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="KingTools 홈">
+        <span class="brand-mark">K</span>
+        <span class="brand-copy"><strong>킹툴즈</strong><small>KingTools</small></span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#suite">프로그램</a>
+        <a href="#experience">경험</a>
+        <a href="#promise">약속</a>
+        <a href="#contact">문의</a>
+      </nav>
+      <a class="header-cta magnetic" href="#suite">전체 프로그램 <span>↗</span></a>
+      <button class="menu" type="button" aria-label="메뉴 열기" aria-expanded="false"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-bg-noise" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <span class="kicker"><i></i> FREEWARE SUITE · 100% CLEAN</span>
+        <h1>필요한 도구는<br><em>가볍고 빠르게.</em></h1>
+        <p>캡처부터 플레이어, 압축, 이미지, 메모, 녹화까지. 매일 쓰는 기능을 광고와 제휴 설치 없이 한곳에 모았습니다.</p>
+        <div class="hero-actions">
+          <a class="button button-light magnetic" href="#suite">프로그램 둘러보기 <span>↗</span></a>
+          <button class="text-button demo-trigger" type="button"><span class="play">▶</span> UI 움직임 보기</button>
+        </div>
+        <div class="hero-proof">
+          <div><strong>8</strong><span>무료 도구</span></div>
+          <div><strong>0</strong><span>광고</span></div>
+          <div><strong>∞</strong><span>사용 기간</span></div>
+        </div>
+      </div>
+
+      <div class="hero-stage reveal" data-delay="120" aria-label="움직이는 프로그램 UI 미리보기">
+        <div class="stage-orbit orbit-one"></div>
+        <div class="stage-orbit orbit-two"></div>
+        <div class="stage-core tilt-card" data-tilt="8">
+          <span class="stage-label">KINGTOOLS</span>
+          <span class="stage-k">K</span>
+          <span class="stage-status"><i></i> All systems ready</span>
+        </div>
+        <article class="float-card float-capture tilt-card" data-tilt="12">
+          <span class="mini-icon">⌗</span><div><b>KingCapture</b><small>Capture · Record</small></div><span class="live">LIVE</span>
+        </article>
+        <article class="float-card float-player tilt-card" data-tilt="10">
+          <span class="mini-icon">▶</span><div><b>KingPlayer</b><small>4K Media Player</small></div>
+        </article>
+        <article class="float-card float-zip tilt-card" data-tilt="10">
+          <span class="mini-icon">⇩</span><div><b>KingZip</b><small>Fast Archive</small></div>
+        </article>
+        <div class="signal-pill signal-a"><i></i> NO ADS</div>
+        <div class="signal-pill signal-b"><i></i> FREE</div>
+      </div>
+
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>KINGCAPTURE</span><b>✦</b><span>KINGPLAYER</span><b>✦</b><span>KINGZIP</span><b>✦</b><span>KINGVIEW</span><b>✦</b><span>KINGMEMO</span><b>✦</b><span>KINGCAM</span><b>✦</b><span>KINGCUT</span><b>✦</b><span>KINGPDF</span><b>✦</b>
+          <span>KINGCAPTURE</span><b>✦</b><span>KINGPLAYER</span><b>✦</b><span>KINGZIP</span><b>✦</b><span>KINGVIEW</span><b>✦</b><span>KINGMEMO</span><b>✦</b><span>KINGCAM</span><b>✦</b><span>KINGCUT</span><b>✦</b><span>KINGPDF</span><b>✦</b>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro shell" id="experience">
+      <div class="section-eyebrow reveal">WHY KINGTOOLS</div>
+      <div class="intro-grid">
+        <h2 class="reveal">툴은 눈에 띄기보다<br><span>일을 방해하지 않아야 합니다.</span></h2>
+        <p class="reveal" data-delay="100">필요한 순간 바로 열리고, 빠르게 끝내고, 조용히 사라지는 경험. 화면의 움직임도 같은 원칙으로 설계했습니다. 과한 장식이 아니라 사용자의 시선을 다음 행동으로 자연스럽게 안내합니다.</p>
+      </div>
+      <div class="principles">
+        <article class="principle reveal hover-lift"><span>01</span><h3>빠른 반응</h3><p>클릭·호버·스크롤에 즉각 반응하는 마이크로 인터랙션.</p></article>
+        <article class="principle reveal hover-lift" data-delay="80"><span>02</span><h3>명확한 흐름</h3><p>움직임으로 다음 정보와 행동을 자연스럽게 연결합니다.</p></article>
+        <article class="principle reveal hover-lift" data-delay="160"><span>03</span><h3>가벼운 구현</h3><p>외부 애니메이션 라이브러리 없이 CSS와 순수 JS로 동작합니다.</p></article>
+      </div>
+    </section>
+
+    <section class="showcase" id="suite">
+      <div class="shell showcase-head">
+        <div class="section-eyebrow reveal">PRODUCT SUITE</div>
+        <h2 class="reveal">스크롤할수록<br>도구가 하나씩 등장합니다.</h2>
+      </div>
+
+      <div class="shell showcase-layout">
+        <div class="sticky-device reveal">
+          <div class="device-window tilt-card" data-tilt="4">
+            <div class="device-top"><div class="window-dots"><i></i><i></i><i></i></div><span id="device-name">KingCapture</span><b>Windows</b></div>
+            <div class="device-screen" id="device-screen">
+              <div class="screen-grid"></div>
+              <div class="screen-orb"></div>
+              <div class="screen-panel">
+                <span class="screen-icon">⌗</span>
+                <strong id="screen-title">빠른 화면 캡처</strong>
+                <small id="screen-copy">필요한 영역만 즉시 캡처하고 기록하세요.</small>
+              </div>
+              <div class="screen-chip chip-1">FAST</div>
+              <div class="screen-chip chip-2">CLEAN</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-story">
+          <article class="product-step is-active" data-product="capture" data-name="KingCapture" data-icon="⌗" data-title="빠른 화면 캡처" data-copy="필요한 영역만 즉시 캡처하고 기록하세요.">
+            <span>01</span><div><small>CAPTURE & RECORD</small><h3>킹캡처</h3><p>이미지 캡처와 화면 녹화를 하나의 가벼운 도구로.</p></div><i>↗</i>
+          </article>
+          <article class="product-step" data-product="player" data-name="KingPlayer" data-icon="▶" data-title="고화질 플레이어" data-copy="가볍게 열고 선명하게 재생하는 미디어 경험.">
+            <span>02</span><div><small>MEDIA PLAYER</small><h3>킹플레이어</h3><p>고화질 영상과 음악을 빠르고 간단하게 재생합니다.</p></div><i>↗</i>
+          </article>
+          <article class="product-step" data-product="zip" data-name="KingZip" data-icon="⇩" data-title="초고속 압축" data-copy="복잡한 옵션 없이 빠르게 압축하고 풀어보세요.">
+            <span>03</span><div><small>FAST ARCHIVE</small><h3>킹집</h3><p>ZIP·7Z·RAR 등 일상적인 압축 업무를 빠르게.</p></div><i>↗</i>
+          </article>
+          <article class="product-step" data-product="view" data-name="KingView" data-icon="▧" data-title="이미지를 빠르게" data-copy="큰 이미지도 기다림 없이 넘기며 확인하세요.">
+            <span>04</span><div><small>IMAGE VIEWER</small><h3>킹뷰</h3><p>대용량 이미지도 부드럽게 탐색하는 이미지 뷰어.</p></div><i>↗</i>
+          </article>
+          <article class="product-step" data-product="memo" data-name="KingMemo" data-icon="≡" data-title="생각을 바로 기록" data-copy="작은 메모부터 업무 체크까지 화면 위에 가볍게.">
+            <span>05</span><div><small>QUICK MEMO</small><h3>킹메모</h3><p>가볍고 예쁜 스티커 메모로 생각을 놓치지 마세요.</p></div><i>↗</i>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="motion-lab shell">
+      <div class="motion-copy reveal">
+        <div class="section-eyebrow">MICRO INTERACTIONS</div>
+        <h2>작은 움직임이<br>사이트를 살아 있게 만듭니다.</h2>
+        <p>버튼 자석 효과, 카드 틸트, 스크롤 리빌, 스티키 제품 전환, 무한 마키, 커서 글로우를 직접 만져보세요.</p>
+      </div>
+      <div class="motion-grid">
+        <button class="lab-card magnetic reveal" type="button"><span>Hover</span><strong>Magnetic Button</strong><i>↗</i></button>
+        <div class="lab-card pulse-card reveal" data-delay="80"><span>Live</span><strong>Soft Pulse</strong><i></i></div>
+        <div class="lab-card tilt-card reveal" data-tilt="14" data-delay="160"><span>Move</span><strong>3D Tilt Card</strong><i>✦</i></div>
+        <div class="lab-card type-card reveal" data-delay="240"><span>Type</span><strong class="typing" data-text="Fast · Clean · Free">Fast · Clean · Free</strong><i>_</i></div>
+      </div>
+    </section>
+
+    <section class="promise shell" id="promise">
+      <div class="promise-card reveal">
+        <div class="promise-copy">
+          <span class="section-eyebrow light">OUR PROMISE</span>
+          <h2>무료는 기능이 아니라<br>킹툴즈의 원칙입니다.</h2>
+          <p>평생 무료, 광고 없음, 제휴 설치 없음, 개인정보 수집 없음.</p>
+        </div>
+        <div class="promise-orbit" aria-hidden="true"><span>K</span><i></i><i></i><i></i></div>
+        <div class="promise-list">
+          <div><b>✓</b><span><strong>평생 무료</strong><small>유료 전환 계획 없음</small></span></div>
+          <div><b>✓</b><span><strong>광고 없음</strong><small>사용에만 집중</small></span></div>
+          <div><b>✓</b><span><strong>누구나 사용</strong><small>개인·기업·학교·기관</small></span></div>
+          <div><b>✓</b><span><strong>빠른 개선</strong><small>의견을 제품에 반영</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta shell" id="contact">
+      <div class="cta-card reveal">
+        <span class="section-eyebrow">READY TO USE</span>
+        <h2>필요한 도구부터<br>바로 시작하세요.</h2>
+        <a class="button button-dark magnetic" href="#suite">전체 프로그램 보기 <span>↗</span></a>
+        <div class="cta-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner"><div><strong>KingTools</strong><span>Fast. Clean. Free.</span></div><p>© KingTools. All rights reserved.</p><a href="#top">맨 위로 ↑</a></div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
