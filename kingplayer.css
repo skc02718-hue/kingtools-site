@@ -7,11 +7,13 @@
 .kp-breadcrumb [aria-current]{color:#263857}
 .kp-hero{min-height:690px;padding:76px 6.7%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.07fr);gap:5%;align-items:center;overflow:hidden;border-radius:36px;color:#fff;background:radial-gradient(circle at 80% 68%,rgba(82,106,204,.20),transparent 43%),linear-gradient(112deg,#11183e 0%,#202b69 53%,#344796 100%)}
 .kp-hero-copy{min-width:0}
+.kp-hero-eyebrow{display:flex;align-items:center;gap:9px;margin-bottom:20px;color:#a9baff;font-size:11px;font-weight:800;letter-spacing:.16em;line-height:1.4}
+.kp-hero-eyebrow::before{content:"";width:6px;height:6px;flex:none;border-radius:50%;background:#a5c5ff}
 .kp-hero-copy h1{margin:0;color:#fff;font-size:clamp(50px,5vw,76px);font-weight:850;letter-spacing:-.055em;line-height:1.12}
-.kp-hero-rule{display:block;width:70px;height:4px;margin:54px 0 39px;border-radius:3px;background:#adbae5}
+.kp-hero-rule{display:block;width:70px;height:4px;margin:43px 0 34px;border-radius:3px;background:#adbae5}
 .kp-hero-copy h2{margin:0;color:#bbcbff;font-size:clamp(40px,4vw,57px);font-weight:850;letter-spacing:-.05em;line-height:1.16}
 .kp-hero-copy>p{margin:30px 0 0;color:#e5e9fa;font-size:clamp(16px,1.4vw,20px);line-height:1.72;letter-spacing:-.025em}
-.kp-hero-actions{display:flex;align-items:center;gap:15px;margin-top:62px;white-space:nowrap}
+.kp-hero-actions{display:flex;align-items:center;gap:15px;margin-top:52px;white-space:nowrap}
 .kp-hero-download{min-height:72px;padding:0 16px 0 26px;display:inline-flex;align-items:center;justify-content:space-between;gap:11px;border-radius:999px;color:#142957;background:#fff;box-shadow:0 12px 32px rgba(172,194,255,.23)}
 .kp-hero-download strong{font-size:20px;font-weight:850;letter-spacing:-.04em}
 .kp-hero-download small{font-size:15px;font-weight:800;letter-spacing:-.02em}
@@ -79,6 +81,7 @@
   .kp-intro{padding-top:20px;padding-bottom:22px}
   .kp-breadcrumb{margin-bottom:14px;font-size:12px}
   .kp-hero{gap:35px;padding:35px 22px 34px;border-radius:23px}
+  .kp-hero-eyebrow{margin-bottom:16px;font-size:10px}
   .kp-hero-copy h1{font-size:clamp(39px,8.5vw,56px)}
   .kp-hero-rule{width:52px;height:3px;margin:31px 0 27px}
   .kp-hero-copy h2{font-size:clamp(32px,7.4vw,46px)}
