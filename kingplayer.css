@@ -24,7 +24,7 @@
 .kp-hero-copy { padding-left:24px; }
 .kp-kicker { display:flex; align-items:center; gap:10px; margin-bottom:22px; color:#c8d5ff; font-size:12px; font-weight:850; letter-spacing:.16em; }
 .kp-kicker i { width:8px; height:8px; border-radius:50%; background:#78a7ff; box-shadow:0 0 0 4px rgba(120,167,255,.08); }
-.kp-hero h1 { margin:0; font-size:clamp(42px,4.25vw,62px); line-height:1.16; letter-spacing:-.05em; }
+.kp-hero h1 { margin:0; font-size:clamp(42px,4.25vw,62px); line-height:1.16; letter-spacing:.015em; }
 .kp-hero-copy > p { margin:28px 0 0; color:rgba(255,255,255,.78); font-size:16px; line-height:1.72; }
 .kp-actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:34px; }
 .kp-button { min-height:54px; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:0 22px; border-radius:999px; font-size:14px; font-weight:800; transition:transform .18s ease,box-shadow .18s ease,background .18s ease; }
@@ -37,8 +37,8 @@
 
 .kp-player-area { min-width:0; }
 .kp-player-window { overflow:hidden; border:1px solid rgba(255,255,255,.08); border-radius:18px; background:#07132f; box-shadow:0 24px 55px rgba(3,10,36,.36); }
-.kp-window-bar { height:27px; display:flex; align-items:center; gap:13px; padding:0 15px; background:#09152f; }
-.kp-window-bar span { width:11px; height:7px; border-radius:2px; background:#61718f; }
+/* 상단 필름 스트립 장식 제거 */
+.kp-window-bar { display:none; }
 .kp-scene { display:block; width:100%; aspect-ratio:16/8.75; object-fit:cover; object-position:center; }
 .kp-player-controls { height:42px; display:grid; grid-template-columns:auto auto 1fr auto auto auto; align-items:center; gap:12px; padding:0 15px; color:#e8ecf7; background:#08142e; font-size:11px; }
 .kp-play { font-size:13px; }
