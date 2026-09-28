@@ -1,23 +1,7 @@
 /* =========================================================
    KINGTOOLS script.js
-   공통 인터랙션 / HERO 슬라이더 / 상품 상세 연결
+   공통 인터랙션 / HERO 슬라이더
    ========================================================= */
-
-/* =========================================================
-   01. 킹플레이어 상세 페이지 연결
-   메인 메뉴와 프로그램 카드의 #kingplayer 링크를 전용 페이지로 이동
-   ========================================================= */
-document.addEventListener('click', (event) => {
-  const link = event.target.closest('a[href="#kingplayer"]');
-  if (!link) return;
-
-  const isKingPlayerNav = link.closest('.primary-nav');
-  const isKingPlayerCard = link.closest('#kingplayer');
-  if (!isKingPlayerNav && !isKingPlayerCard) return;
-
-  event.preventDefault();
-  window.location.href = './kingplayer.html';
-});
 
 /* =========================================================
    02. 모바일 메뉴
