@@ -105,3 +105,16 @@ if (track && viewport && prevButton && nextButton && pauseButton && countCurrent
   showSlide(0);
   restartAuto();
 }
+
+/* =========================================================
+   05. 킹플레이어 상세 페이지 연결
+   메인 페이지의 기존 #kingplayer 링크를 상세 페이지로 보냅니다.
+   ========================================================= */
+if (!/\/kingplayer\.html$/.test(window.location.pathname)) {
+  document.querySelectorAll('a[href="#kingplayer"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.location.href = './kingplayer.html';
+    });
+  });
+}
