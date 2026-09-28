@@ -129,6 +129,20 @@
 
 
 @media(min-width:1181px){
+  .kp-hero{min-height:0;aspect-ratio:1.97;padding:0 10.5%;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5.2%}
   .kp-hero-copy h1,.kp-hero-copy h2,.kp-os-heading h2,.kp-features-heading h2,.kp-os-card-bottom h3,.kp-feature-card h3{font-weight:700}
+  .kp-hero-copy h1{font-size:clamp(52px,4vw,76px)}
+  .kp-hero-copy h2{font-size:clamp(38px,2.8vw,52px)}
+  .kp-hero-copy>p{font-size:clamp(16px,1.1vw,18px);line-height:1.6}
+  .kp-hero-actions{margin-top:38px}
+  .kp-hero-download,.kp-hero-platforms{min-height:54px}
+  .kp-hero-download strong{font-size:16px}
+  .kp-hero-download small{font-size:12px}
+  .kp-download-icon{width:32px;height:32px}
+  .kp-download-icon svg{width:22px;height:22px}
+  .kp-hero-platforms{font-size:13px}
+  .kp-metric{min-height:64px}
+  .kp-metric strong{font-size:18px}
+  .kp-metric span{font-size:11px}
   .kp-hero-download strong,.kp-eyebrow,.kp-feature-footer strong{font-weight:700}
 }
