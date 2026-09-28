@@ -108,9 +108,19 @@ if (track && viewport && prevButton && nextButton && pauseButton && countCurrent
 
 /* =========================================================
    05. 킹플레이어 상세 페이지 연결
-   메인 페이지의 기존 #kingplayer 링크를 상세 페이지로 보냅니다.
+   메인 페이지의 킹플레이어 카드에도 다른 제품과 동일한
+   "킹플레이어 상세 →" 링크를 표시합니다.
    ========================================================= */
 if (!/\/kingplayer\.html$/.test(window.location.pathname)) {
+  const kingPlayerBottom = document.querySelector('#kingplayer .program-bottom');
+
+  if (kingPlayerBottom && !kingPlayerBottom.querySelector('a')) {
+    const detailLink = document.createElement('a');
+    detailLink.href = './kingplayer.html';
+    detailLink.innerHTML = '킹플레이어 상세 <i>→</i>';
+    kingPlayerBottom.appendChild(detailLink);
+  }
+
   document.querySelectorAll('a[href="#kingplayer"]').forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
