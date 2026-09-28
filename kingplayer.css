@@ -37,8 +37,9 @@
 
 .kp-player-area { min-width:0; }
 .kp-player-window { overflow:hidden; border:1px solid rgba(255,255,255,.08); border-radius:18px; background:#07132f; box-shadow:0 24px 55px rgba(3,10,36,.36); }
-/* 상단 필름 스트립 장식 제거 */
-.kp-window-bar { display:none; }
+/* 상단 띠는 유지하고 필름 퍼포레이션(작은 사각형)만 숨김 */
+.kp-window-bar { height:27px; display:flex; align-items:center; padding:0 15px; background:#09152f; }
+.kp-window-bar span { display:none; }
 .kp-scene { display:block; width:100%; aspect-ratio:16/8.75; object-fit:cover; object-position:center; }
 .kp-player-controls { height:42px; display:grid; grid-template-columns:auto auto 1fr auto auto auto; align-items:center; gap:12px; padding:0 15px; color:#e8ecf7; background:#08142e; font-size:11px; }
 .kp-play { font-size:13px; }
