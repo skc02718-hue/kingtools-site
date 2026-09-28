@@ -1,16 +1,6 @@
 .primary-nav a.is-current{color:#155eef}
 .primary-nav a.is-current::after{transform:scaleX(1)}
 
-.kp-reference,.kp-reference-skip{display:none}
-@media(min-width:901px){
-  body>.skip-link:not(.kp-reference-skip),body>.site-header,body>main#main,body>.site-footer{display:none}
-  .kp-reference-skip{display:block}
-  .kp-reference{position:relative;display:block;width:min(100%,1920px);margin-inline:auto}
-  .kp-reference-image{display:block;width:100%;height:auto}
-  .kp-hotspot{position:absolute;left:var(--x);top:var(--y);width:var(--w);height:var(--h);border-radius:3px}
-  .kp-hotspot:focus-visible{outline:3px solid #155eef;outline-offset:2px;background:rgba(21,94,239,.12)}
-}
-
 .kp-intro{padding-top:28px;padding-bottom:34px}
 .kp-breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:18px;color:#7182a0;font-size:13px;font-weight:700}
 .kp-breadcrumb a:hover{color:#155eef}
@@ -135,4 +125,79 @@
   .kp-os-card{padding:15px;min-height:170px}
   .kp-os-card-bottom{gap:3px;align-items:flex-start;flex-direction:column}
   .kp-os-card-bottom h3{font-size:18px}
+}
+
+/* The supplied desktop reference is a full-page view with a narrow central column.
+   Keep every word and card as real HTML so it stays sharp at 1920px. */
+@media(min-width:1181px){
+  :root{--shell:min(52.2vw,1320px)}
+  body{font-size:clamp(11px,.74vw,16px)}
+  .site-header{position:relative;margin-top:2.3vw;backdrop-filter:none;background:#fff}
+  .header-inner{min-height:3.55vw;gap:1.1vw}
+  .brand{gap:.45vw}
+  .brand-mark{width:1.85vw;height:1.85vw;border-radius:.5vw;font-size:1.05vw;box-shadow:0 .42vw .95vw rgba(21,94,239,.25)}
+  .brand-copy strong{font-size:.94vw;font-weight:700}
+  .brand-copy small{margin-top:.18vw;font-size:.49vw}
+  .primary-nav{gap:clamp(7px,.82vw,20px)}
+  .primary-nav a{padding-block:1.1vw;font-size:.61vw;font-weight:650}
+  .primary-nav a::after{bottom:.8vw;height:1px}
+  .primary-nav .nav-support{padding:.35vw .62vw}
+  .kp-intro{padding-top:.88vw;padding-bottom:4.55vw}
+  .kp-breadcrumb{gap:.45vw;margin-bottom:.53vw;font-size:.53vw;font-weight:600}
+  .kp-hero{min-height:0;aspect-ratio:1.97;padding:0 10.5%;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5.2%;border-radius:1.35vw}
+  .kp-hero-eyebrow{gap:.4vw;margin-bottom:1vw;font-size:.49vw;font-weight:700;letter-spacing:.14em}
+  .kp-hero-eyebrow::before{width:.27vw;height:.27vw}
+  .kp-hero-copy h1{font-size:2.28vw;font-weight:700;line-height:1.16}
+  .kp-hero-rule{width:2.35vw;height:2px;margin:1.85vw 0 1.25vw}
+  .kp-hero-copy h2{font-size:1.78vw;font-weight:700;line-height:1.17}
+  .kp-hero-copy>p{margin-top:1.12vw;font-size:.67vw;line-height:1.7}
+  .kp-hero-actions{gap:.7vw;margin-top:1.65vw}
+  .kp-hero-download{min-height:2.25vw;padding:0 .48vw 0 .82vw;gap:.45vw;box-shadow:0 .5vw 1.3vw rgba(172,194,255,.22)}
+  .kp-hero-download strong{font-size:.68vw;font-weight:700}
+  .kp-hero-download small{font-size:.52vw;font-weight:700}
+  .kp-download-icon{width:1.55vw;height:1.55vw;border-radius:.28vw}
+  .kp-download-icon svg{width:1.05vw;height:1.05vw}
+  .kp-hero-platforms{min-height:2.25vw;padding:0 .75vw;font-size:.58vw}
+  .kp-film-frame{border-radius:.5vw;box-shadow:0 1vw 2vw rgba(5,12,45,.15)}
+  .kp-film-edge::after{height:.43vw;background-size:1.45vw .43vw}
+  .kp-metrics{gap:.55vw;margin-top:.63vw}
+  .kp-metric{min-height:2.5vw;padding:.42vw .2vw;border-radius:.44vw}
+  .kp-metric strong{font-size:1vw;font-weight:700}
+  .kp-metric span{font-size:.52vw}
+
+  .kp-os-layout{min-height:17.5vw;padding-block:3.9vw;grid-template-columns:.81fr 1.19fr;gap:3.1vw}
+  .kp-eyebrow{font-size:.49vw;font-weight:700}
+  .kp-os-heading h2,.kp-features-heading h2{margin-top:.75vw;font-size:2.15vw;font-weight:700}
+  .kp-os-heading p{margin-top:.9vw;font-size:.68vw}
+  .kp-os-cards{gap:.7vw}
+  .kp-os-card{min-height:9.3vw;padding:1.2vw;border-radius:.9vw;box-shadow:0 .9vw 1.6vw rgba(27,40,72,.045)}
+  .kp-os-icon{width:2.35vw;height:2.35vw;border-radius:.68vw}
+  .kp-os-icon svg{width:1.2vw;height:1.2vw}
+  .kp-os-card-bottom small{font-size:.44vw}
+  .kp-os-card-bottom h3{font-size:1vw;font-weight:700}
+  .kp-support-tag{padding:.2vw .42vw;font-size:.48vw}
+
+  .kp-features-section{padding:4vw 0 5.2vw}
+  .kp-features-heading{gap:2.5vw}
+  .kp-features-heading p{margin-bottom:.4vw;font-size:.68vw}
+  .kp-feature-grid{gap:.7vw;margin-top:1.85vw}
+  .kp-feature-card{min-height:15.3vw;padding:1.35vw;border-radius:1vw}
+  .kp-feature-top small{font-size:.43vw}
+  .kp-feature-icon{width:2.4vw;height:2.4vw;border-radius:.72vw;font-size:.92vw}
+  .kp-feature-icon svg{width:1.17vw;height:1.17vw}
+  .kp-feature-card h3{margin-top:1.05vw;font-size:1.03vw;font-weight:700}
+  .kp-feature-card p{margin-top:.58vw;font-size:.66vw}
+  .kp-feature-footer{min-height:1.5vw;padding-top:.78vw}
+  .kp-feature-footer strong{font-size:.49vw;font-weight:700}
+  .kp-feature-footer span{font-size:.95vw}
+
+  .footer-top{padding-block:2.9vw 2.2vw;gap:3.1vw}
+  .footer-brand>p{margin-top:1.15vw;font-size:.56vw}
+  .footer-brand>p+p{margin-top:.56vw}
+  .footer-links h2{margin-bottom:.9vw;font-size:.66vw}
+  .footer-links>div{gap:.45vw .84vw}
+  .footer-links a{font-size:.56vw}
+  .company-info{padding-block:.95vw}
+  .company-info p{margin:.25vw 0;gap:.3vw .82vw;font-size:.5vw}
+  .footer-bottom{min-height:3.1vw;font-size:.52vw}
 }
