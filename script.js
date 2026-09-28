@@ -1,6 +1,6 @@
 /* =========================================================
    KINGTOOLS script.js
-   공통 인터랙션 / 언어 선택 / HERO 슬라이더 / 상품 상세 연결
+   공통 인터랙션 / HERO 슬라이더 / 상품 상세 연결
    ========================================================= */
 
 /* =========================================================
@@ -53,65 +53,6 @@ if (menuButton && navigation) {
   window.addEventListener('resize', () => {
     if (window.innerWidth > 1180) closeMenu();
   });
-}
-
-/* =========================================================
-   03. 언어 선택
-   ========================================================= */
-const headerInner = document.querySelector('.header-inner');
-
-if (headerInner && !headerInner.querySelector('.language-switcher')) {
-  const languages = [
-    ['en', '🇺🇸', 'English'], ['ja', '🇯🇵', '日本語'], ['zh-CN', '🇨🇳', '简体中文'],
-    ['zh-TW', '🇹🇼', '繁體中文'], ['de', '🇩🇪', 'Deutsch'], ['fr', '🇫🇷', 'français'],
-    ['it', '🇮🇹', 'italiano'], ['es', '🇪🇸', 'español'], ['pt', '🇧🇷', 'Português'],
-    ['nl', '🇳🇱', 'Nederlands'], ['pl', '🇵🇱', 'polski'], ['ru', '🇷🇺', 'Русский'],
-    ['vi', '🇻🇳', 'Tiếng Việt'], ['id', '🇮🇩', 'Bahasa Indonesia'], ['tr', '🇹🇷', 'Türkçe'],
-    ['th', '🇹🇭', 'ไทย']
-  ];
-
-  const languageSwitcher = document.createElement('div');
-  languageSwitcher.className = 'language-switcher';
-  languageSwitcher.innerHTML = `
-    <button class="language-button" type="button" aria-expanded="false" aria-haspopup="true" aria-label="언어 선택">
-      <span aria-hidden="true" style="font-size:18px;line-height:1">🇰🇷</span><span class="language-caret" aria-hidden="true">▾</span>
-    </button>
-    <div class="language-menu" role="menu" aria-label="언어 선택 메뉴" hidden></div>`;
-
-  const languageMenu = languageSwitcher.querySelector('.language-menu');
-  const languageButton = languageSwitcher.querySelector('.language-button');
-
-  languages.forEach(([code, flag, label]) => {
-    const option = document.createElement('button');
-    option.type = 'button';
-    option.className = 'language-option';
-    option.setAttribute('role', 'menuitem');
-    option.setAttribute('lang', code);
-    option.innerHTML = `<span aria-hidden="true" style="width:22px;text-align:center;font-size:17px">${flag}</span><span>${label}</span>`;
-    option.addEventListener('click', () => {
-      languageMenu.hidden = true;
-      languageButton.setAttribute('aria-expanded', 'false');
-      const translateUrl = `https://translate.google.com/translate?sl=ko&tl=${encodeURIComponent(code)}&u=${encodeURIComponent(window.location.href)}`;
-      window.open(translateUrl, '_blank', 'noopener,noreferrer');
-    });
-    languageMenu.appendChild(option);
-  });
-
-  languageButton.addEventListener('click', (event) => {
-    event.stopPropagation();
-    const willOpen = languageMenu.hidden;
-    languageMenu.hidden = !willOpen;
-    languageButton.setAttribute('aria-expanded', String(willOpen));
-  });
-
-  document.addEventListener('click', (event) => {
-    if (!languageSwitcher.contains(event.target)) {
-      languageMenu.hidden = true;
-      languageButton.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  headerInner.appendChild(languageSwitcher);
 }
 
 /* =========================================================
