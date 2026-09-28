@@ -117,8 +117,8 @@
 .kp-feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .kp-feature-card { min-height:250px; display:flex; flex-direction:column; padding:28px 30px 20px; border:1px solid #e3e8f1; border-radius:18px; background:#fff; box-shadow:0 8px 24px rgba(16,24,40,.022); }
 .kp-feature-card-soft { background:#f8f9fc; }
-.kp-feature-top { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; }
-.kp-feature-icon { width:42px; height:42px; display:grid; place-items:center; flex:0 0 auto; border-radius:12px; color:#2d66ed; background:#edf3ff; font-weight:900; }
+.kp-feature-top { display:flex; align-items:flex-start; justify-content:flex-end; gap:18px; }
+.kp-feature-icon { display:none; }
 .kp-feature-icon svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
 .kp-feature-icon svg path[d*="10 9"] { fill:currentColor; stroke:none; }
 .kp-feature-num { color:#a1abc0; font-size:9px; font-weight:850; letter-spacing:.13em; }
