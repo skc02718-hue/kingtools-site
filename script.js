@@ -111,12 +111,12 @@ if (track && viewport && prevButton && nextButton && pauseButton && countCurrent
    메인 페이지의 킹플레이어 카드에도 다른 제품과 동일한
    "킹플레이어 상세 →" 링크를 표시합니다.
    ========================================================= */
-if (!/\/kingplayer\.html$/.test(window.location.pathname)) {
+if (!/\/kingplayer-detail\.html$/.test(window.location.pathname)) {
   const kingPlayerBottom = document.querySelector('#kingplayer .program-bottom');
 
   if (kingPlayerBottom && !kingPlayerBottom.querySelector('a')) {
     const detailLink = document.createElement('a');
-    detailLink.href = './kingplayer.html';
+    detailLink.href = './kingplayer-detail.html';
     detailLink.innerHTML = '킹플레이어 상세 <i>→</i>';
     kingPlayerBottom.appendChild(detailLink);
   }
@@ -124,7 +124,7 @@ if (!/\/kingplayer\.html$/.test(window.location.pathname)) {
   document.querySelectorAll('a[href="#kingplayer"]').forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
-      window.location.href = './kingplayer.html';
+      window.location.href = './kingplayer-detail.html';
     });
   });
 }
